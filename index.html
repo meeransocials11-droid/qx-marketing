@@ -9,7 +9,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:#03070d;color:#e2e8f0;overflow-x:hidden}
-
 .blob{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
 .blob1{width:600px;height:600px;background:#1e40af;opacity:0.15;top:-200px;left:-150px;animation:b1 20s ease-in-out infinite}
 .blob2{width:550px;height:550px;background:#7c3aed;opacity:0.13;bottom:-150px;right:-150px;animation:b2 24s ease-in-out infinite}
@@ -19,56 +18,43 @@ body{font-family:'Inter',sans-serif;background:#03070d;color:#e2e8f0;overflow-x:
 @keyframes b2{0%,100%{transform:translate(0,0)}50%{transform:translate(-100px,-80px) scale(1.1)}}
 @keyframes b3{0%,100%{transform:translate(0,0)}50%{transform:translate(-80px,80px)}}
 @keyframes b4{0%,100%{transform:translate(0,0)}50%{transform:translate(100px,-60px)}}
-
 .grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:60px 60px}
-
 nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s ease}
 nav.scroll{background:rgba(3,7,13,0.95);backdrop-filter:blur(25px);border-bottom:1px solid rgba(139,92,246,0.15)}
-
 .logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
 .logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#7c3aed,#db2777);display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px rgba(124,58,237,0.45);font-weight:900;color:#fff;font-size:0.9rem;letter-spacing:1px}
 .logo-text{font-size:1.1rem;font-weight:800;letter-spacing:3px;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6,#60a5fa);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoGrad 6s linear infinite}
 @keyframes logoGrad{to{background-position:200% center}}
-
 .nav-menu{display:flex;gap:3rem;align-items:center}
 .nav-menu a{color:#94a3b8;text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s;position:relative}
 .nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:linear-gradient(90deg,#60a5fa,#f472b6);transition:width 0.3s}
 .nav-menu a:hover{color:#f1f5f9}
 .nav-menu a:hover::after{width:100%}
-
 .nav-btn{padding:0.65rem 1.6rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:8px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 0 30px rgba(124,58,237,0.4)}
 .nav-btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(124,58,237,0.6)}
-
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative;z-index:5}
 .hero-box{max-width:900px}
-
 .hero-label{display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.1rem;background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(124,58,237,0.15));border:1px solid rgba(139,92,246,0.35);border-radius:50px;font-size:0.8rem;color:#c084fc;font-weight:600;margin-bottom:2rem;letter-spacing:1px;animation:fade-up 0.8s ease both}
 .label-dot{width:6px;height:6px;background:linear-gradient(90deg,#60a5fa,#f472b6);border-radius:50%;box-shadow:0 0 12px rgba(124,58,237,0.6);animation:dot-pulse 2s infinite}
 @keyframes dot-pulse{0%,100%{box-shadow:0 0 12px rgba(124,58,237,0.6)}50%{box-shadow:0 0 25px rgba(124,58,237,1)}}
-
 h1{font-size:clamp(2.5rem,8vw,5.5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:1.5rem;animation:fade-up 0.9s 0.1s ease both}
 .title-main{display:block;color:#f1f5f9}
 .title-glow{display:block;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6,#60a5fa);background-size:250% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:title-grad 6s linear infinite}
 @keyframes title-grad{to{background-position:250% center}}
-
 .hero-desc{font-size:1.15rem;color:#94a3b8;line-height:1.8;max-width:650px;margin:0 auto 2.5rem;animation:fade-up 1s 0.2s ease both}
-
 .hero-buttons{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;animation:fade-up 1s 0.3s ease both}
 .btn-primary{padding:0.95rem 2.2rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 0 30px rgba(124,58,237,0.4)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 45px rgba(124,58,237,0.6)}
 .btn-secondary{padding:0.95rem 2.2rem;background:transparent;color:#c084fc;border:1.5px solid rgba(192,132,252,0.5);border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s}
 .btn-secondary:hover{background:rgba(192,132,252,0.1);border-color:rgba(192,132,252,0.8);transform:translateY(-3px)}
-
 .scroll-indicator{margin-top:5rem;opacity:0.5;animation:fade-up 1s 0.5s ease both}
 .scroll-line{width:1px;height:60px;background:linear-gradient(to bottom,transparent,#7c3aed,#c084fc,transparent);margin:0 auto;animation:scroll-move 2s ease-in-out infinite}
 @keyframes scroll-move{0%{opacity:0;transform:translateY(-10px)}50%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
 @keyframes fade-up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
-
 .section{padding:7rem 5%;max-width:1500px;margin:0 auto;position:relative;z-index:5}
 .section-label{font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:0.7rem;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .section-title{font-size:2.5rem;font-weight:900;letter-spacing:-1px;line-height:1.15;margin-bottom:1rem;color:#f1f5f9}
 .section-desc{font-size:1rem;color:#64748b;max-width:520px;line-height:1.75}
-
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.8rem;margin-top:4rem}
 .service-card{background:linear-gradient(135deg,rgba(15,23,42,0.85),rgba(20,10,40,0.85));border:1px solid rgba(139,92,246,0.15);border-radius:16px;padding:2.2rem;transition:all 0.45s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden;backdrop-filter:blur(10px)}
 .service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(124,58,237,0.1),rgba(219,39,119,0.08));opacity:0;transition:opacity 0.4s;pointer-events:none}
@@ -79,62 +65,63 @@ h1{font-size:clamp(2.5rem,8vw,5.5rem);font-weight:900;line-height:1.05;letter-sp
 .service-card h3{font-size:1.15rem;font-weight:800;color:#e2e8f0;margin-bottom:0.7rem}
 .service-card p{font-size:0.92rem;color:#64748b;line-height:1.7}
 .service-tag{display:inline-block;margin-top:1.3rem;font-size:0.75rem;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1.5px}
-
 .stats-section{background:linear-gradient(135deg,rgba(37,99,235,0.05),rgba(124,58,237,0.06),rgba(219,39,119,0.05));border-top:1px solid rgba(139,92,246,0.12);border-bottom:1px solid rgba(139,92,246,0.12);position:relative;z-index:5}
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.8rem;margin-top:4rem}
 .stat-box{text-align:center;padding:2.2rem;background:linear-gradient(135deg,rgba(15,23,42,0.8),rgba(20,10,40,0.8));border:1px solid rgba(139,92,246,0.15);border-radius:16px;transition:all 0.4s;backdrop-filter:blur(10px)}
 .stat-box:hover{border-color:rgba(192,132,252,0.4);transform:translateY(-5px);box-shadow:0 15px 45px rgba(124,58,237,0.15)}
 .stat-number{font-size:3rem;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem;letter-spacing:-1px}
 .stat-name{font-size:0.9rem;color:#64748b;font-weight:600;letter-spacing:0.5px}
-
 .portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.8rem;margin-top:4rem}
 .portfolio-card{border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid rgba(139,92,246,0.15);transition:all 0.45s cubic-bezier(0.4,0,0.2,1)}
 .portfolio-card:hover{transform:translateY(-8px) scale(1.02);border-color:rgba(192,132,252,0.5);box-shadow:0 30px 65px rgba(0,0,0,0.5),0 0 60px rgba(124,58,237,0.2)}
-.portfolio-visual{height:240px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.portfolio-visual{height:240px;position:relative;overflow:hidden}
 .portfolio-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(3,7,13,0.9))}
 .orb{position:absolute;border-radius:50%;filter:blur(40px);opacity:0.6;pointer-events:none}
 .portfolio-info{padding:1.4rem;background:linear-gradient(135deg,rgba(10,15,30,0.95),rgba(15,10,30,0.95));backdrop-filter:blur(10px)}
 .portfolio-info h4{font-size:1.05rem;font-weight:800;color:#e2e8f0;margin-bottom:0.3rem}
 .portfolio-info span{font-size:0.8rem;color:#7c3aed;font-weight:600}
-
-.contact-section{position:relative;z-index:5;margin-bottom:0}
+.contact-section{position:relative;z-index:5}
 .contact-container{background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(124,58,237,0.08),rgba(219,39,119,0.06));border:1px solid rgba(139,92,246,0.2);border-radius:24px;padding:4rem;text-align:center;margin-top:3.5rem;position:relative;overflow:hidden}
 .contact-container::before{content:'';position:absolute;inset:-1px;border-radius:24px;background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(124,58,237,0.15),rgba(219,39,119,0.1),transparent);opacity:0.5;pointer-events:none;z-index:0}
-
 .form{display:flex;flex-direction:column;gap:1.1rem;max-width:500px;margin:0 auto;position:relative;z-index:1}
 .input{background:rgba(3,7,13,0.9);border:1.5px solid rgba(139,92,246,0.25);border-radius:11px;padding:1rem 1.3rem;color:#e2e8f0;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s;width:100%}
-.input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25);background:rgba(3,7,13,0.95)}
+.input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25)}
 .input::placeholder{color:#475569}
-textarea.input{resize:vertical;min-height:130px;font-family:'Inter',sans-serif}
+textarea.input{resize:vertical;min-height:130px}
 
 .phone-group{display:flex;gap:0;width:100%;position:relative}
-.country-select{background:rgba(3,7,13,0.95);border:1.5px solid rgba(139,92,246,0.25);border-right:none;border-radius:11px 0 0 11px;padding:1rem 0.8rem;color:#e2e8f0;font-size:0.9rem;font-family:'Inter',sans-serif;outline:none;cursor:pointer;transition:all 0.3s;min-width:150px;appearance:none;-webkit-appearance:none}
-.country-select:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25) inset;background:rgba(3,7,13,0.95)}
+.custom-select{position:relative;min-width:160px}
+.selected-country{background:rgba(3,7,13,0.95);border:1.5px solid rgba(139,92,246,0.25);border-right:none;border-radius:11px 0 0 11px;padding:1rem 0.9rem;color:#e2e8f0;font-size:0.95rem;cursor:pointer;display:flex;align-items:center;gap:0.5rem;transition:all 0.3s;height:100%;white-space:nowrap;user-select:none}
+.selected-country:hover{border-color:rgba(192,132,252,0.5)}
+.selected-country.open{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25)}
+.selected-country .arrow{margin-left:auto;font-size:0.7rem;opacity:0.6;transition:transform 0.3s}
+.selected-country.open .arrow{transform:rotate(180deg)}
+.dropdown-list{position:absolute;top:calc(100% + 4px);left:0;width:280px;background:rgba(5,10,20,0.98);border:1.5px solid rgba(139,92,246,0.3);border-radius:12px;max-height:260px;overflow-y:auto;z-index:9999;display:none;backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.dropdown-list.open{display:block}
+.dropdown-list::-webkit-scrollbar{width:4px}
+.dropdown-list::-webkit-scrollbar-track{background:transparent}
+.dropdown-list::-webkit-scrollbar-thumb{background:rgba(124,58,237,0.4);border-radius:2px}
+.search-input{width:100%;background:rgba(3,7,13,0.8);border:none;border-bottom:1px solid rgba(139,92,246,0.2);padding:0.75rem 1rem;color:#e2e8f0;font-size:0.88rem;font-family:'Inter',sans-serif;outline:none}
+.search-input::placeholder{color:#475569}
+.country-option{padding:0.7rem 1rem;display:flex;align-items:center;gap:0.75rem;cursor:pointer;transition:background 0.2s;font-size:0.9rem;color:#e2e8f0}
+.country-option:hover{background:rgba(124,58,237,0.2)}
+.country-option.active{background:rgba(124,58,237,0.25)}
+.flag{font-size:1.3rem;line-height:1}
+.country-name{flex:1;text-align:left;color:#cbd5e1}
+.dial-code{color:#7c3aed;font-weight:600;font-size:0.85rem}
 .phone-input{background:rgba(3,7,13,0.9);border:1.5px solid rgba(139,92,246,0.25);border-left:1px solid rgba(139,92,246,0.1);border-radius:0 11px 11px 0;padding:1rem 1.3rem;color:#e2e8f0;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s;flex:1}
-.phone-input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25);background:rgba(3,7,13,0.95)}
+.phone-input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25)}
 .phone-input::placeholder{color:#475569}
+.hidden-phone{display:none}
 
 footer{position:relative;z-index:5;border-top:1px solid rgba(139,92,246,0.12);padding:3rem 5%;display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#475569;flex-wrap:wrap;gap:2rem}
 footer a{color:#7c3aed;text-decoration:none;transition:color 0.3s;font-weight:600}
 footer a:hover{color:#c084fc}
 .footer-logo{font-size:1.1rem;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px}
-
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1)}
 .reveal.in{opacity:1;transform:translateY(0)}
-
-@media(max-width:900px){
-  .services,.portfolio{grid-template-columns:1fr 1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  nav{padding:0.9rem 3%}
-  .section{padding:5rem 3%}
-  .contact-container{padding:2.5rem 1.5rem}
-}
-@media(max-width:600px){
-  .services,.portfolio,.stats-grid{grid-template-columns:1fr}
-  .nav-menu{display:none}
-  .hero{padding:6rem 1.5rem 3rem}
-  h1{font-size:2.2rem}
-}
+@media(max-width:900px){.services,.portfolio{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}nav{padding:0.9rem 3%}.section{padding:5rem 3%}.contact-container{padding:2.5rem 1.5rem}}
+@media(max-width:600px){.services,.portfolio,.stats-grid{grid-template-columns:1fr}.nav-menu{display:none}.hero{padding:6rem 1.5rem 3rem}h1{font-size:2.2rem}.dropdown-list{width:240px}}
 </style>
 </head>
 <body>
@@ -224,15 +211,26 @@ footer a:hover{color:#c084fc}
     <div class="reveal" style="text-align:center;margin-bottom:1rem">
       <div class="section-label">Let's work together</div>
       <h2 class="section-title">Ready to build something extraordinary?</h2>
-      <p style="color:#64748b;font-size:1rem;margin-bottom:0">Tell us about your project. We'll get back within 24 hours.</p>
+      <p style="color:#64748b;font-size:1rem">Tell us about your project. We'll get back within 24 hours.</p>
     </div>
     <div class="contact-container">
-      <form class="form" action="https://formspree.io/f/maqpdzgl" method="POST">
+      <form class="form" action="https://formspree.io/f/maqpdzgl" method="POST" id="contactForm">
         <input class="input" type="text" name="name" placeholder="Your full name" required>
         <input class="input" type="email" name="email" placeholder="your@email.com" required>
         <div class="phone-group">
-          <select class="country-select" name="country_code" id="countryCode"></select>
-          <input class="phone-input" type="tel" name="phone" placeholder="Phone number" required>
+          <div class="custom-select" id="customSelect">
+            <div class="selected-country" id="selectedCountry">
+              <span class="flag" id="selectedFlag">🇦🇪</span>
+              <span id="selectedCode">+971</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="dropdown-list" id="dropdownList">
+              <input class="search-input" type="text" id="searchInput" placeholder="Search country...">
+              <div id="countryOptions"></div>
+            </div>
+          </div>
+          <input class="phone-input" type="tel" id="phoneInput" placeholder="Phone number" required>
+          <input class="hidden-phone" type="hidden" name="phone" id="fullPhone">
         </div>
         <textarea class="input" name="message" placeholder="Tell us about your project..." required></textarea>
         <button class="btn-primary" type="submit" style="width:100%;padding:1rem;font-size:1rem">Send Message</button>
@@ -257,8 +255,62 @@ footer a:hover{color:#c084fc}
 <script>
 const countries=[{f:"🇦🇫",n:"Afghanistan",c:"+93"},{f:"🇦🇱",n:"Albania",c:"+355"},{f:"🇩🇿",n:"Algeria",c:"+213"},{f:"🇦🇩",n:"Andorra",c:"+376"},{f:"🇦🇴",n:"Angola",c:"+244"},{f:"🇦🇬",n:"Antigua",c:"+1-268"},{f:"🇦🇷",n:"Argentina",c:"+54"},{f:"🇦🇲",n:"Armenia",c:"+374"},{f:"🇦🇺",n:"Australia",c:"+61"},{f:"🇦🇹",n:"Austria",c:"+43"},{f:"🇦🇿",n:"Azerbaijan",c:"+994"},{f:"🇧🇸",n:"Bahamas",c:"+1-242"},{f:"🇧🇭",n:"Bahrain",c:"+973"},{f:"🇧🇩",n:"Bangladesh",c:"+880"},{f:"🇧🇧",n:"Barbados",c:"+1-246"},{f:"🇧🇾",n:"Belarus",c:"+375"},{f:"🇧🇪",n:"Belgium",c:"+32"},{f:"🇧🇿",n:"Belize",c:"+501"},{f:"🇧🇯",n:"Benin",c:"+229"},{f:"🇧🇹",n:"Bhutan",c:"+975"},{f:"🇧🇴",n:"Bolivia",c:"+591"},{f:"🇧🇦",n:"Bosnia",c:"+387"},{f:"🇧🇼",n:"Botswana",c:"+267"},{f:"🇧🇷",n:"Brazil",c:"+55"},{f:"🇧🇳",n:"Brunei",c:"+673"},{f:"🇧🇬",n:"Bulgaria",c:"+359"},{f:"🇧🇫",n:"Burkina Faso",c:"+226"},{f:"🇧🇮",n:"Burundi",c:"+257"},{f:"🇨🇻",n:"Cape Verde",c:"+238"},{f:"🇰🇭",n:"Cambodia",c:"+855"},{f:"🇨🇲",n:"Cameroon",c:"+237"},{f:"🇨🇦",n:"Canada",c:"+1"},{f:"🇨🇫",n:"Central African Rep.",c:"+236"},{f:"🇹🇩",n:"Chad",c:"+235"},{f:"🇨🇱",n:"Chile",c:"+56"},{f:"🇨🇳",n:"China",c:"+86"},{f:"🇨🇴",n:"Colombia",c:"+57"},{f:"🇰🇲",n:"Comoros",c:"+269"},{f:"🇨🇬",n:"Congo",c:"+242"},{f:"🇨🇷",n:"Costa Rica",c:"+506"},{f:"🇭🇷",n:"Croatia",c:"+385"},{f:"🇨🇺",n:"Cuba",c:"+53"},{f:"🇨🇾",n:"Cyprus",c:"+357"},{f:"🇨🇿",n:"Czech Republic",c:"+420"},{f:"🇩🇰",n:"Denmark",c:"+45"},{f:"🇩🇯",n:"Djibouti",c:"+253"},{f:"🇩🇴",n:"Dominican Rep.",c:"+1-809"},{f:"🇪🇨",n:"Ecuador",c:"+593"},{f:"🇪🇬",n:"Egypt",c:"+20"},{f:"🇸🇻",n:"El Salvador",c:"+503"},{f:"🇬🇶",n:"Equatorial Guinea",c:"+240"},{f:"🇪🇷",n:"Eritrea",c:"+291"},{f:"🇪🇪",n:"Estonia",c:"+372"},{f:"🇪🇹",n:"Ethiopia",c:"+251"},{f:"🇫🇯",n:"Fiji",c:"+679"},{f:"🇫🇮",n:"Finland",c:"+358"},{f:"🇫🇷",n:"France",c:"+33"},{f:"🇬🇦",n:"Gabon",c:"+241"},{f:"🇬🇲",n:"Gambia",c:"+220"},{f:"🇬🇪",n:"Georgia",c:"+995"},{f:"🇩🇪",n:"Germany",c:"+49"},{f:"🇬🇭",n:"Ghana",c:"+233"},{f:"🇬🇷",n:"Greece",c:"+30"},{f:"🇬🇩",n:"Grenada",c:"+1-473"},{f:"🇬🇹",n:"Guatemala",c:"+502"},{f:"🇬🇳",n:"Guinea",c:"+224"},{f:"🇬🇼",n:"Guinea-Bissau",c:"+245"},{f:"🇬🇾",n:"Guyana",c:"+592"},{f:"🇭🇹",n:"Haiti",c:"+509"},{f:"🇭🇳",n:"Honduras",c:"+504"},{f:"🇭🇺",n:"Hungary",c:"+36"},{f:"🇮🇸",n:"Iceland",c:"+354"},{f:"🇮🇳",n:"India",c:"+91"},{f:"🇮🇩",n:"Indonesia",c:"+62"},{f:"🇮🇷",n:"Iran",c:"+98"},{f:"🇮🇶",n:"Iraq",c:"+964"},{f:"🇮🇪",n:"Ireland",c:"+353"},{f:"🇮🇱",n:"Israel",c:"+972"},{f:"🇮🇹",n:"Italy",c:"+39"},{f:"🇯🇲",n:"Jamaica",c:"+1-876"},{f:"🇯🇵",n:"Japan",c:"+81"},{f:"🇯🇴",n:"Jordan",c:"+962"},{f:"🇰🇿",n:"Kazakhstan",c:"+7"},{f:"🇰🇪",n:"Kenya",c:"+254"},{f:"🇰🇼",n:"Kuwait",c:"+965"},{f:"🇰🇬",n:"Kyrgyzstan",c:"+996"},{f:"🇱🇦",n:"Laos",c:"+856"},{f:"🇱🇻",n:"Latvia",c:"+371"},{f:"🇱🇧",n:"Lebanon",c:"+961"},{f:"🇱🇸",n:"Lesotho",c:"+266"},{f:"🇱🇷",n:"Liberia",c:"+231"},{f:"🇱🇾",n:"Libya",c:"+218"},{f:"🇱🇮",n:"Liechtenstein",c:"+423"},{f:"🇱🇹",n:"Lithuania",c:"+370"},{f:"🇱🇺",n:"Luxembourg",c:"+352"},{f:"🇲🇬",n:"Madagascar",c:"+261"},{f:"🇲🇼",n:"Malawi",c:"+265"},{f:"🇲🇾",n:"Malaysia",c:"+60"},{f:"🇲🇻",n:"Maldives",c:"+960"},{f:"🇲🇱",n:"Mali",c:"+223"},{f:"🇲🇹",n:"Malta",c:"+356"},{f:"🇲🇷",n:"Mauritania",c:"+222"},{f:"🇲🇺",n:"Mauritius",c:"+230"},{f:"🇲🇽",n:"Mexico",c:"+52"},{f:"🇲🇩",n:"Moldova",c:"+373"},{f:"🇲🇨",n:"Monaco",c:"+377"},{f:"🇲🇳",n:"Mongolia",c:"+976"},{f:"🇲🇪",n:"Montenegro",c:"+382"},{f:"🇲🇦",n:"Morocco",c:"+212"},{f:"🇲🇿",n:"Mozambique",c:"+258"},{f:"🇲🇲",n:"Myanmar",c:"+95"},{f:"🇳🇦",n:"Namibia",c:"+264"},{f:"🇳🇵",n:"Nepal",c:"+977"},{f:"🇳🇱",n:"Netherlands",c:"+31"},{f:"🇳🇿",n:"New Zealand",c:"+64"},{f:"🇳🇮",n:"Nicaragua",c:"+505"},{f:"🇳🇪",n:"Niger",c:"+227"},{f:"🇳🇬",n:"Nigeria",c:"+234"},{f:"🇰🇵",n:"North Korea",c:"+850"},{f:"🇲🇰",n:"North Macedonia",c:"+389"},{f:"🇳🇴",n:"Norway",c:"+47"},{f:"🇴🇲",n:"Oman",c:"+968"},{f:"🇵🇰",n:"Pakistan",c:"+92"},{f:"🇵🇦",n:"Panama",c:"+507"},{f:"🇵🇬",n:"Papua New Guinea",c:"+675"},{f:"🇵🇾",n:"Paraguay",c:"+595"},{f:"🇵🇪",n:"Peru",c:"+51"},{f:"🇵🇭",n:"Philippines",c:"+63"},{f:"🇵🇱",n:"Poland",c:"+48"},{f:"🇵🇹",n:"Portugal",c:"+351"},{f:"🇶🇦",n:"Qatar",c:"+974"},{f:"🇷🇴",n:"Romania",c:"+40"},{f:"🇷🇺",n:"Russia",c:"+7"},{f:"🇷🇼",n:"Rwanda",c:"+250"},{f:"🇸🇦",n:"Saudi Arabia",c:"+966"},{f:"🇸🇳",n:"Senegal",c:"+221"},{f:"🇷🇸",n:"Serbia",c:"+381"},{f:"🇸🇱",n:"Sierra Leone",c:"+232"},{f:"🇸🇬",n:"Singapore",c:"+65"},{f:"🇸🇰",n:"Slovakia",c:"+421"},{f:"🇸🇮",n:"Slovenia",c:"+386"},{f:"🇸🇴",n:"Somalia",c:"+252"},{f:"🇿🇦",n:"South Africa",c:"+27"},{f:"🇰🇷",n:"South Korea",c:"+82"},{f:"🇸🇸",n:"South Sudan",c:"+211"},{f:"🇪🇸",n:"Spain",c:"+34"},{f:"🇱🇰",n:"Sri Lanka",c:"+94"},{f:"🇸🇩",n:"Sudan",c:"+249"},{f:"🇸🇷",n:"Suriname",c:"+597"},{f:"🇸🇿",n:"Eswatini",c:"+268"},{f:"🇸🇪",n:"Sweden",c:"+46"},{f:"🇨🇭",n:"Switzerland",c:"+41"},{f:"🇸🇾",n:"Syria",c:"+963"},{f:"🇹🇼",n:"Taiwan",c:"+886"},{f:"🇹🇯",n:"Tajikistan",c:"+992"},{f:"🇹🇿",n:"Tanzania",c:"+255"},{f:"🇹🇭",n:"Thailand",c:"+66"},{f:"🇹🇱",n:"Timor-Leste",c:"+670"},{f:"🇹🇬",n:"Togo",c:"+228"},{f:"🇹🇹",n:"Trinidad & Tobago",c:"+1-868"},{f:"🇹🇳",n:"Tunisia",c:"+216"},{f:"🇹🇷",n:"Turkey",c:"+90"},{f:"🇹🇲",n:"Turkmenistan",c:"+993"},{f:"🇺🇬",n:"Uganda",c:"+256"},{f:"🇺🇦",n:"Ukraine",c:"+380"},{f:"🇦🇪",n:"UAE",c:"+971"},{f:"🇬🇧",n:"United Kingdom",c:"+44"},{f:"🇺🇸",n:"United States",c:"+1"},{f:"🇺🇾",n:"Uruguay",c:"+598"},{f:"🇺🇿",n:"Uzbekistan",c:"+998"},{f:"🇻🇪",n:"Venezuela",c:"+58"},{f:"🇻🇳",n:"Vietnam",c:"+84"},{f:"🇾🇪",n:"Yemen",c:"+967"},{f:"🇿🇲",n:"Zambia",c:"+260"},{f:"🇿🇼",n:"Zimbabwe",c:"+263"}];
 
-const sel=document.getElementById('countryCode');
-countries.sort((a,b)=>a.n.localeCompare(b.n)).forEach(c=>{const o=document.createElement('option');o.value=c.c;o.textContent=`${c.f} ${c.n} ${c.c}`;if(c.c==='+971')o.selected=true;sel.appendChild(o);});
+let selectedCountry = countries.find(c=>c.c==='+971');
+const sorted = [...countries].sort((a,b)=>a.n.localeCompare(b.n));
+
+function renderOptions(list){
+  const container = document.getElementById('countryOptions');
+  container.innerHTML='';
+  list.forEach(c=>{
+    const div=document.createElement('div');
+    div.className='country-option'+(c.c===selectedCountry.c?' active':'');
+    div.innerHTML=`<span class="flag">${c.f}</span><span class="country-name">${c.n}</span><span class="dial-code">${c.c}</span>`;
+    div.onclick=()=>selectCountry(c);
+    container.appendChild(div);
+  });
+}
+
+function selectCountry(c){
+  selectedCountry=c;
+  document.getElementById('selectedFlag').textContent=c.f;
+  document.getElementById('selectedCode').textContent=c.c;
+  document.getElementById('dropdownList').classList.remove('open');
+  document.getElementById('selectedCountry').classList.remove('open');
+  updateFullPhone();
+  renderOptions(sorted);
+}
+
+function updateFullPhone(){
+  const num=document.getElementById('phoneInput').value;
+  document.getElementById('fullPhone').value=selectedCountry.c+' '+num;
+}
+
+document.getElementById('selectedCountry').onclick=function(e){
+  e.stopPropagation();
+  this.classList.toggle('open');
+  document.getElementById('dropdownList').classList.toggle('open');
+  document.getElementById('searchInput').focus();
+};
+
+document.getElementById('searchInput').oninput=function(){
+  const q=this.value.toLowerCase();
+  renderOptions(sorted.filter(c=>c.n.toLowerCase().includes(q)||c.c.includes(q)));
+};
+
+document.getElementById('phoneInput').oninput=updateFullPhone;
+
+document.addEventListener('click',function(e){
+  if(!document.getElementById('customSelect').contains(e.target)){
+    document.getElementById('dropdownList').classList.remove('open');
+    document.getElementById('selectedCountry').classList.remove('open');
+  }
+});
+
+document.getElementById('contactForm').onsubmit=function(){
+  updateFullPhone();
+};
+
+renderOptions(sorted);
 
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scroll',window.scrollY>80);},{passive:true});
