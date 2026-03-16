@@ -3,93 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QX Marketing - Metaverse & Web Agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<title>QX Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#050914;color:#e2e8f0;overflow-x:hidden}
-.blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:0.18;pointer-events:none;z-index:0}
-.blob1{width:600px;height:600px;background:radial-gradient(circle,#3b82f6,transparent);top:-100px;left:-100px;animation:blobMove1 20s ease-in-out infinite}
-.blob2{width:500px;height:500px;background:radial-gradient(circle,#6366f1,transparent);bottom:-100px;right:-100px;animation:blobMove2 25s ease-in-out infinite}
-.blob3{width:400px;height:400px;background:radial-gradient(circle,#8b5cf6,transparent);top:40%;left:40%;animation:blobMove3 18s ease-in-out infinite}
-@keyframes blobMove1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(80px,60px) scale(1.1)}66%{transform:translate(-40px,80px) scale(0.9)}}
-@keyframes blobMove2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-60px,-80px) scale(1.15)}66%{transform:translate(80px,-40px) scale(0.95)}}
-@keyframes blobMove3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-80px,60px) scale(1.2)}}
-nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.5s ease}
-nav.scrolled{background:rgba(5,9,20,0.85);backdrop-filter:blur(24px);border-bottom:1px solid rgba(99,102,241,0.15)}
+body{font-family:'Inter',sans-serif;background:#04080f;color:#e2e8f0;overflow-x:hidden}
+
+.blob{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.blob1{width:500px;height:500px;background:#1d4ed8;opacity:0.12;top:-150px;left:-100px;animation:b1 18s ease-in-out infinite}
+.blob2{width:450px;height:450px;background:#7c3aed;opacity:0.12;bottom:-100px;right:-100px;animation:b2 22s ease-in-out infinite}
+.blob3{width:350px;height:350px;background:#db2777;opacity:0.1;top:45%;left:35%;animation:b3 16s ease-in-out infinite}
+@keyframes b1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,80px)}}
+@keyframes b2{0%,100%{transform:translate(0,0)}50%{transform:translate(-80px,-60px)}}
+@keyframes b3{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,60px)}}
+
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.04) 1px,transparent 1px);background-size:70px 70px}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s ease}
+nav.scrolled{background:rgba(4,8,15,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.2)}
 .nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
-.logo-mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#1e3a8a,#4f46e5);border:1px solid rgba(99,102,241,0.5);display:flex;align-items:center;justify-content:center;box-shadow:0 0 18px rgba(99,102,241,0.35)}
-.logo-mark-text{font-size:1rem;font-weight:900;background:linear-gradient(120deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px}
-.logo-text{font-size:1.15rem;font-weight:800;letter-spacing:3px;background:linear-gradient(120deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#7c3aed);border:1px solid rgba(139,92,246,0.5);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(124,58,237,0.4)}
+.logo-mark span{font-size:0.95rem;font-weight:900;color:#fff;letter-spacing:1px}
+.logo-text{font-size:1.1rem;font-weight:800;letter-spacing:3px;background:linear-gradient(120deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:2.5rem;align-items:center}
-.nav-links a{color:#94a3b8;text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s ease;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:linear-gradient(90deg,#60a5fa,#a78bfa);transition:width 0.4s cubic-bezier(0.4,0,0.2,1)}
+.nav-links a{color:#94a3b8;text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:linear-gradient(90deg,#60a5fa,#c084fc);transition:width 0.3s}
 .nav-links a:hover{color:#e2e8f0}
 .nav-links a:hover::after{width:100%}
-.nav-cta{padding:0.6rem 1.4rem;background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;border:none;border-radius:8px;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.3s ease}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(99,102,241,0.55)}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative;z-index:5}
-.hero-inner{max-width:860px}
-h1{font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:1.5rem;animation:fadeUp 0.9s 0.1s ease both}
-.h1-line{display:block}
-.h1-glow{background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 50%,#60a5fa 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradMove 6s linear infinite}
-@keyframes gradMove{to{background-position:200% center}}
-.hero-sub{font-size:1.15rem;color:#94a3b8;line-height:1.7;max-width:600px;margin:0 auto 2.5rem;animation:fadeUp 1s 0.2s ease both}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s 0.3s ease both}
-.btn-primary{padding:0.85rem 2rem;background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(99,102,241,0.5)}
-.btn-outline{padding:0.85rem 2rem;background:transparent;color:#60a5fa;border:1.5px solid rgba(96,165,250,0.4);border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
-.btn-outline:hover{background:rgba(96,165,250,0.08);border-color:rgba(96,165,250,0.7);transform:translateY(-3px)}
-.scroll-hint{margin-top:4rem;opacity:0.4}
-.scroll-line{width:1px;height:60px;background:linear-gradient(to bottom,transparent,#6366f1,transparent);margin:0.5rem auto;animation:scrollDrop 2s ease-in-out infinite}
-@keyframes scrollDrop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.section-wrap{padding:6rem 4rem;max-width:1400px;margin:0 auto;position:relative;z-index:5}
-.sec-label{font-size:0.8rem;font-weight:600;letter-spacing:3px;color:#6366f1;text-transform:uppercase;margin-bottom:0.75rem}
-.sec-title{font-size:2.5rem;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:1rem;color:#f1f5f9}
-.sec-sub{font-size:1rem;color:#64748b;max-width:500px;line-height:1.7}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.card{background:rgba(15,23,42,0.6);border:1px solid rgba(99,102,241,0.12);border-radius:16px;padding:2rem;transition:all 0.45s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden;backdrop-filter:blur(10px)}
-.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(99,102,241,0.07),rgba(59,130,246,0.07),transparent);opacity:0;transition:opacity 0.4s ease;pointer-events:none}
-.card:hover{border-color:rgba(99,102,241,0.4);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 40px rgba(99,102,241,0.12)}
+.nav-cta{padding:0.55rem 1.3rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:8px;font-size:0.875rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 0 20px rgba(124,58,237,0.3)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(124,58,237,0.6)}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 4rem;position:relative;z-index:5}
+.hero-inner{max-width:820px}
+.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 1rem;background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(124,58,237,0.15));border:1px solid rgba(139,92,246,0.35);border-radius:999px;font-size:0.78rem;color:#c084fc;font-weight:600;margin-bottom:1.75rem;letter-spacing:1px;animation:up 0.7s ease both}
+.dot{width:5px;height:5px;background:#c084fc;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(192,132,252,0.6)}50%{box-shadow:0 0 0 5px rgba(192,132,252,0)}}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:1.4rem;animation:up 0.8s 0.1s ease both}
+.line1{display:block;color:#f1f5f9}
+.line2{display:block;background:linear-gradient(135deg,#60a5fa,#c084fc,#f472b6);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:grad 5s linear infinite}
+@keyframes grad{to{background-position:200% center}}
+.hero-sub{font-size:1.1rem;color:#94a3b8;line-height:1.7;max-width:580px;margin:0 auto 2.5rem;animation:up 0.9s 0.2s ease both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:up 0.9s 0.3s ease both}
+.btn-p{padding:0.8rem 1.9rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:10px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 0 25px rgba(124,58,237,0.35)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 35px rgba(124,58,237,0.6)}
+.btn-o{padding:0.8rem 1.9rem;background:transparent;color:#c084fc;border:1.5px solid rgba(192,132,252,0.4);border-radius:10px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.3s}
+.btn-o:hover{background:rgba(192,132,252,0.08);border-color:rgba(192,132,252,0.7);transform:translateY(-3px)}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,transparent,#7c3aed,transparent);margin:4rem auto 0;animation:drop 2s ease-in-out infinite;opacity:0.5}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+.sw{padding:5.5rem 4rem;max-width:1400px;margin:0 auto;position:relative;z-index:5}
+.sl{font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:0.6rem;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.st{font-size:2.3rem;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:0.9rem;color:#f1f5f9}
+.ss{font-size:0.95rem;color:#64748b;max-width:480px;line-height:1.7}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.5rem}
+.card{background:linear-gradient(135deg,rgba(15,23,42,0.8),rgba(20,10,40,0.8));border:1px solid rgba(139,92,246,0.15);border-radius:16px;padding:1.8rem;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden;backdrop-filter:blur(8px)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(124,58,237,0.08),rgba(219,39,119,0.05));opacity:0;transition:opacity 0.4s;pointer-events:none}
+.card:hover{border-color:rgba(192,132,252,0.5);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.5),0 0 40px rgba(124,58,237,0.15),0 0 80px rgba(219,39,119,0.05)}
 .card:hover::before{opacity:1}
-.card-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(99,102,241,0.15));border:1px solid rgba(99,102,241,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.5rem;transition:all 0.4s ease}
-.card:hover .card-icon{box-shadow:0 0 20px rgba(99,102,241,0.3)}
-.card h3{font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:0.6rem}
-.card p{font-size:0.9rem;color:#64748b;line-height:1.65}
-.card-tag{display:inline-block;margin-top:1.2rem;font-size:0.75rem;font-weight:600;color:#6366f1;letter-spacing:1px}
-.stats-section{background:rgba(99,102,241,0.03);border-top:1px solid rgba(99,102,241,0.08);border-bottom:1px solid rgba(99,102,241,0.08);position:relative;z-index:5}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:4rem}
-.stat{text-align:center;padding:2rem;background:rgba(15,23,42,0.5);border:1px solid rgba(99,102,241,0.12);border-radius:14px;transition:all 0.4s ease;backdrop-filter:blur(8px)}
-.stat:hover{border-color:rgba(99,102,241,0.3);transform:translateY(-4px)}
-.stat-num{font-size:2.8rem;font-weight:900;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.5rem}
-.stat-lbl{font-size:0.85rem;color:#64748b;font-weight:500}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.port-item{border-radius:14px;overflow:hidden;cursor:pointer;border:1px solid rgba(99,102,241,0.12);transition:all 0.45s cubic-bezier(0.4,0,0.2,1)}
-.port-item:hover{transform:translateY(-6px) scale(1.01);border-color:rgba(99,102,241,0.4);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(99,102,241,0.15)}
-.port-bg{height:220px;position:relative;overflow:hidden}
-.port-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(5,9,20,0.8))}
-.port-info{padding:1.25rem;background:rgba(15,23,42,0.7);backdrop-filter:blur(10px)}
-.port-info h4{font-size:1rem;font-weight:700;color:#e2e8f0;margin-bottom:0.25rem}
-.port-info span{font-size:0.8rem;color:#64748b}
-.port-orb{position:absolute;border-radius:50%;filter:blur(40px);opacity:0.5;pointer-events:none}
-.contact-section{position:relative;z-index:5}
-.contact-wrap{background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(99,102,241,0.06));border:1px solid rgba(99,102,241,0.15);border-radius:24px;padding:4rem;text-align:center;margin-top:3rem}
-.contact-form{display:flex;flex-direction:column;gap:1rem;max-width:500px;margin:0 auto}
-.contact-input{background:rgba(15,23,42,0.8);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:0.85rem 1.25rem;color:#e2e8f0;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s ease;width:100%}
-.contact-input:focus{border-color:rgba(99,102,241,0.5);box-shadow:0 0 20px rgba(99,102,241,0.2)}
-.contact-input::placeholder{color:#475569}
-textarea.contact-input{resize:vertical;min-height:120px}
-.success-msg{display:none;color:#4ade80;font-size:0.95rem;margin-top:1rem}
-footer{position:relative;z-index:5;border-top:1px solid rgba(99,102,241,0.1);padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#475569}
-footer a{color:#6366f1;text-decoration:none;transition:color 0.3s}
-footer a:hover{color:#a78bfa}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1)}
+.card-icon{width:46px;height:46px;background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(124,58,237,0.2));border:1px solid rgba(139,92,246,0.3);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.3rem;transition:all 0.4s}
+.card:hover .card-icon{box-shadow:0 0 20px rgba(124,58,237,0.4);border-color:rgba(192,132,252,0.5)}
+.card h3{font-size:1.05rem;font-weight:700;color:#e2e8f0;margin-bottom:0.5rem}
+.card p{font-size:0.875rem;color:#64748b;line-height:1.6}
+.card-tag{display:inline-block;margin-top:1rem;font-size:0.72rem;font-weight:700;background:linear-gradient(90deg,#60a5fa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px}
+
+.stats-sec{background:linear-gradient(135deg,rgba(37,99,235,0.04),rgba(124,58,237,0.06),rgba(219,39,119,0.04));border-top:1px solid rgba(139,92,246,0.1);border-bottom:1px solid rgba(139,92,246,0.1);position:relative;z-index:5}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:3.5rem}
+.stat{text-align:center;padding:1.8rem;background:linear-gradient(135deg,rgba(15,23,42,0.7),rgba(20,10,40,0.7));border:1px solid rgba(139,92,246,0.15);border-radius:14px;transition:all 0.4s;backdrop-filter:blur(8px)}
+.stat:hover{border-color:rgba(192,132,252,0.4);transform:translateY(-4px);box-shadow:0 10px 40px rgba(124,58,237,0.15)}
+.stat-num{font-size:2.6rem;font-weight:900;background:linear-gradient(135deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.4rem;letter-spacing:-1px}
+.stat-lbl{font-size:0.82rem;color:#64748b;font-weight:500;letter-spacing:0.5px}
+
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.port-item{border-radius:14px;overflow:hidden;cursor:pointer;border:1px solid rgba(139,92,246,0.15);transition:all 0.4s cubic-bezier(0.4,0,0.2,1)}
+.port-item:hover{transform:translateY(-6px) scale(1.01);border-color:rgba(192,132,252,0.5);box-shadow:0 24px 50px rgba(0,0,0,0.5),0 0 40px rgba(124,58,237,0.2)}
+.port-bg{height:210px;position:relative;overflow:hidden}
+.port-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(4,8,15,0.85))}
+.port-orb{position:absolute;border-radius:50%;filter:blur(35px);opacity:0.55;pointer-events:none}
+.port-info{padding:1.1rem 1.2rem 1.3rem;background:linear-gradient(135deg,rgba(10,15,30,0.9),rgba(15,10,30,0.9));backdrop-filter:blur(8px)}
+.port-info h4{font-size:0.95rem;font-weight:700;color:#e2e8f0;margin-bottom:0.2rem}
+.port-info span{font-size:0.78rem;color:#7c3aed}
+
+.contact-sec{position:relative;z-index:5}
+.contact-wrap{background:linear-gradient(135deg,rgba(37,99,235,0.07),rgba(124,58,237,0.07),rgba(219,39,119,0.05));border:1px solid rgba(139,92,246,0.2);border-radius:24px;padding:3.5rem;text-align:center;margin-top:3rem;position:relative;overflow:hidden}
+.contact-wrap::before{content:'';position:absolute;inset:-1px;border-radius:24px;background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(124,58,237,0.2),rgba(219,39,119,0.1),transparent);opacity:0.4;pointer-events:none;z-index:0}
+.contact-form{display:flex;flex-direction:column;gap:0.9rem;max-width:480px;margin:0 auto;position:relative;z-index:1}
+.inp{background:rgba(4,8,15,0.8);border:1px solid rgba(139,92,246,0.25);border-radius:10px;padding:0.8rem 1.1rem;color:#e2e8f0;font-size:0.92rem;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s;width:100%}
+.inp:focus{border-color:rgba(192,132,252,0.6);box-shadow:0 0 20px rgba(124,58,237,0.2)}
+.inp::placeholder{color:#475569}
+textarea.inp{resize:vertical;min-height:110px}
+
+.phone-wrap{display:flex;gap:0;width:100%;position:relative}
+.country-select{background:rgba(4,8,15,0.9);border:1px solid rgba(139,92,246,0.25);border-right:none;border-radius:10px 0 0 10px;padding:0.8rem 0.6rem;color:#e2e8f0;font-size:0.85rem;font-family:'Inter',sans-serif;outline:none;cursor:pointer;transition:all 0.3s;min-width:130px;appearance:none;-webkit-appearance:none}
+.country-select:focus{border-color:rgba(192,132,252,0.6);box-shadow:0 0 20px rgba(124,58,237,0.2)}
+.phone-input{background:rgba(4,8,15,0.8);border:1px solid rgba(139,92,246,0.25);border-left:1px solid rgba(139,92,246,0.1);border-radius:0 10px 10px 0;padding:0.8rem 1.1rem;color:#e2e8f0;font-size:0.92rem;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s;flex:1}
+.phone-input:focus{border-color:rgba(192,132,252,0.6);box-shadow:0 0 20px rgba(124,58,237,0.2)}
+.phone-input::placeholder{color:#475569}
+
+footer{position:relative;z-index:5;border-top:1px solid rgba(139,92,246,0.12);padding:2.2rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;color:#475569}
+footer a{color:#7c3aed;text-decoration:none;transition:color 0.3s}
+footer a:hover{color:#c084fc}
+.footer-logo{font-size:1rem;font-weight:900;background:linear-gradient(120deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s cubic-bezier(0.4,0,0.2,1),transform 0.65s cubic-bezier(0.4,0,0.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.03) 1px,transparent 1px);background-size:80px 80px}
-@media(max-width:900px){.services-grid,.portfolio-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}nav{padding:1rem 1.5rem}.section-wrap{padding:4rem 1.5rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
-@media(max-width:600px){.services-grid,.portfolio-grid,.stats-row{grid-template-columns:1fr}.nav-links{display:none}}
+
+@media(max-width:900px){.services-grid,.port-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}nav{padding:1rem 1.5rem}.sw{padding:4rem 1.5rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem 1.5rem}}
+@media(max-width:600px){.services-grid,.port-grid,.stats-grid{grid-template-columns:1fr}.nav-links{display:none}.contact-wrap{padding:2rem 1.2rem}}
 </style>
 </head>
 <body>
@@ -97,36 +119,42 @@ footer a:hover{color:#a78bfa}
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
 <div class="blob blob3"></div>
+
 <nav id="nav">
   <a class="nav-logo" href="#">
-    <div class="logo-mark"><span class="logo-mark-text">QX</span></div>
+    <div class="logo-mark"><span>QX</span></div>
     <span class="logo-text">QX MARKETING</span>
   </a>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <button class="nav-cta">Get Started</button>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
   </div>
 </nav>
+
 <section class="hero" id="home">
   <div class="hero-inner">
-    <h1><span class="h1-line" style="color:#f1f5f9">We Build Brands</span><span class="h1-line h1-glow">for the Future</span></h1>
+    <div class="hero-tag"><span class="dot"></span>Metaverse · Web · Strategy</div>
+    <h1>
+      <span class="line1">We Build Brands</span>
+      <span class="line2">for the Future</span>
+    </h1>
     <p class="hero-sub">QX Marketing crafts immersive web experiences and metaverse strategies that move people — and move business forward.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a Project</button>
-      <button class="btn-outline" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See Our Work</button>
+      <button class="btn-p" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a Project</button>
+      <button class="btn-o" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See Our Work</button>
     </div>
-    <div class="scroll-hint"><div class="scroll-line"></div></div>
+    <div class="scroll-line"></div>
   </div>
 </section>
-<div id="services" style="padding-top:2rem">
-  <div class="section-wrap reveal">
-    <div class="sec-label">What We Do</div>
+
+<div id="services">
+  <div class="sw reveal">
+    <div class="sl">What We Do</div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
-      <h2 class="sec-title">Built for the<br>digital frontier</h2>
-      <p class="sec-sub">From metaverse-ready experiences to high-conversion websites — QX delivers across every channel.</p>
+      <h2 class="st">Built for the<br>digital frontier</h2>
+      <p class="ss">From metaverse-ready experiences to high-conversion websites — QX delivers across every channel.</p>
     </div>
     <div class="services-grid">
       <div class="card reveal"><div class="card-icon">🌐</div><h3>Web Development</h3><p>Blazing-fast, beautifully crafted websites with seamless interactions and pixel-perfect design.</p><span class="card-tag">→ Web3 Ready</span></div>
@@ -138,13 +166,14 @@ footer a:hover{color:#a78bfa}
     </div>
   </div>
 </div>
-<div class="stats-section">
-  <div class="section-wrap reveal">
-    <div style="text-align:center;margin-bottom:1rem">
-      <div class="sec-label" style="text-align:center">By the numbers</div>
-      <h2 class="sec-title" style="text-align:center">Results that speak</h2>
+
+<div class="stats-sec">
+  <div class="sw reveal">
+    <div style="text-align:center">
+      <div class="sl" style="-webkit-text-fill-color:unset;background:none;color:#c084fc;display:block">By the numbers</div>
+      <h2 class="st" style="text-align:center">Results that speak</h2>
     </div>
-    <div class="stats-row">
+    <div class="stats-grid">
       <div class="stat reveal"><div class="stat-num">500+</div><div class="stat-lbl">Projects Delivered</div></div>
       <div class="stat reveal"><div class="stat-num">150+</div><div class="stat-lbl">Happy Clients</div></div>
       <div class="stat reveal"><div class="stat-num">50M+</div><div class="stat-lbl">Users Reached</div></div>
@@ -152,52 +181,78 @@ footer a:hover{color:#a78bfa}
     </div>
   </div>
 </div>
+
 <div id="work">
-  <div class="section-wrap reveal">
-    <div class="sec-label">Selected Work</div>
-    <h2 class="sec-title">Projects we're proud of</h2>
-    <div class="portfolio-grid">
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0f1f4a,#1e3a8a)"><div class="port-orb" style="width:200px;height:200px;background:#3b82f6;top:-60px;right:-40px"></div></div><div class="port-info"><h4>NexaVerse Platform</h4><span>Metaverse Experience</span></div></div>
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#1a0a2e,#4c1d95)"><div class="port-orb" style="width:180px;height:180px;background:#8b5cf6;top:-40px;left:-40px"></div></div><div class="port-info"><h4>Luminary Commerce</h4><span>Web Development</span></div></div>
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0c2a3d,#164e63)"><div class="port-orb" style="width:150px;height:150px;background:#0ea5e9;top:-30px;right:10px"></div></div><div class="port-info"><h4>PulseAI Dashboard</h4><span>SaaS Product</span></div></div>
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e)"><div class="port-orb" style="width:160px;height:160px;background:#4f46e5;top:-20px;left:50px"></div></div><div class="port-info"><h4>Kova Brand System</h4><span>Brand Identity</span></div></div>
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0f2027,#203a43)"><div class="port-orb" style="width:140px;height:140px;background:#06b6d4;top:-30px;right:30px"></div></div><div class="port-info"><h4>VR Showroom</h4><span>Immersive Experience</span></div></div>
-      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#240040,#3b0066)"><div class="port-orb" style="width:170px;height:170px;background:#9333ea;top:-50px;left:-20px"></div></div><div class="port-info"><h4>Orbit Mobile App</h4><span>Mobile Development</span></div></div>
+  <div class="sw reveal">
+    <div class="sl">Selected Work</div>
+    <h2 class="st">Projects we're proud of</h2>
+    <div class="port-grid">
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0f1f4a,#1e3a8a)"><div class="port-orb" style="width:180px;height:180px;background:#3b82f6;top:-50px;right:-30px"></div><div class="port-orb" style="width:100px;height:100px;background:#7c3aed;bottom:10px;left:10px"></div></div><div class="port-info"><h4>NexaVerse Platform</h4><span>Metaverse Experience</span></div></div>
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#1a0a2e,#4c1d95)"><div class="port-orb" style="width:160px;height:160px;background:#8b5cf6;top:-30px;left:-30px"></div><div class="port-orb" style="width:90px;height:90px;background:#f472b6;bottom:15px;right:15px"></div></div><div class="port-info"><h4>Luminary Commerce</h4><span>Web Development</span></div></div>
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0c1a3d,#1e3a8a)"><div class="port-orb" style="width:140px;height:140px;background:#2563eb;top:-20px;right:10px"></div><div class="port-orb" style="width:110px;height:110px;background:#c084fc;bottom:-10px;left:20px"></div></div><div class="port-info"><h4>PulseAI Dashboard</h4><span>SaaS Product</span></div></div>
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69)"><div class="port-orb" style="width:150px;height:150px;background:#7c3aed;top:-20px;left:40px"></div><div class="port-orb" style="width:80px;height:80px;background:#f472b6;bottom:10px;right:10px"></div></div><div class="port-info"><h4>Kova Brand System</h4><span>Brand Identity</span></div></div>
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#0c1a3d,#1a0a2e)"><div class="port-orb" style="width:130px;height:130px;background:#3b82f6;top:-20px;right:20px"></div><div class="port-orb" style="width:100px;height:100px;background:#c084fc;bottom:10px;left:10px"></div></div><div class="port-info"><h4>VR Showroom</h4><span>Immersive Experience</span></div></div>
+      <div class="port-item reveal"><div class="port-bg" style="background:linear-gradient(135deg,#240040,#4c1d95)"><div class="port-orb" style="width:160px;height:160px;background:#9333ea;top:-40px;left:-10px"></div><div class="port-orb" style="width:90px;height:90px;background:#f472b6;bottom:0;right:0"></div></div><div class="port-info"><h4>Orbit Mobile App</h4><span>Mobile Development</span></div></div>
     </div>
   </div>
 </div>
-<div id="contact" class="contact-section">
-  <div class="section-wrap reveal">
+
+<div id="contact" class="contact-sec">
+  <div class="sw reveal">
     <div class="contact-wrap">
-      <div class="sec-label" style="text-align:center">Let's work together</div>
-      <h2 class="sec-title" style="text-align:center;font-size:2rem;margin-bottom:0.75rem">Ready to build something<br><span class="h1-glow">extraordinary?</span></h2>
-      <p style="color:#64748b;margin-bottom:2.5rem;font-size:0.95rem">Tell us about your project. We'll get back within 24 hours.</p>
+      <div class="sl" style="text-align:center;display:block;-webkit-text-fill-color:unset;background:none;color:#c084fc">Let's work together</div>
+      <h2 class="st" style="text-align:center;font-size:1.9rem;margin-bottom:0.6rem">Ready to build something <span class="line2">extraordinary?</span></h2>
+      <p style="color:#64748b;margin-bottom:2rem;font-size:0.9rem;position:relative;z-index:1">Tell us about your project. We'll get back within 24 hours.</p>
       <form class="contact-form" action="https://formspree.io/f/maqpdzgl" method="POST">
-        <input class="contact-input" type="text" name="name" placeholder="Your name" required>
-        <input class="contact-input" type="email" name="email" placeholder="your@email.com" required>
-        <textarea class="contact-input" name="message" placeholder="Tell us about your project..." required></textarea>
-        <button class="btn-primary" type="submit">Send Message</button>
+        <input class="inp" type="text" name="name" placeholder="Your full name" required>
+        <input class="inp" type="email" name="email" placeholder="your@email.com" required>
+        <div class="phone-wrap">
+          <select class="country-select" name="country_code" id="countryCode"></select>
+          <input class="phone-input" type="tel" name="phone" placeholder="Phone number" required>
+        </div>
+        <textarea class="inp" name="message" placeholder="Tell us about your project..." required></textarea>
+        <button class="btn-p" type="submit" style="width:100%;padding:0.9rem">Send Message</button>
       </form>
     </div>
   </div>
 </div>
+
 <footer>
   <div style="display:flex;align-items:center;gap:0.75rem">
-    <span style="font-size:1.1rem;font-weight:900;background:linear-gradient(120deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px">QX</span>
+    <span class="footer-logo">QX</span>
     <span>© 2025 QX Marketing. All rights reserved.</span>
   </div>
   <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center">
-    <a href="#">hello@qxmarketing.com</a>
-    <a href="#">Metaverse</a>
-    <a href="#">Web</a>
-    <a href="#">Strategy</a>
+    <a href="mailto:hello@qxmarketing.com">hello@qxmarketing.com</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
   </div>
 </footer>
+
 <script>
+const countries = [
+  {f:"🇦🇫",n:"Afghanistan",c:"+93"},{f:"🇦🇱",n:"Albania",c:"+355"},{f:"🇩🇿",n:"Algeria",c:"+213"},{f:"🇦🇩",n:"Andorra",c:"+376"},{f:"🇦🇴",n:"Angola",c:"+244"},{f:"🇦🇬",n:"Antigua",c:"+1-268"},{f:"🇦🇷",n:"Argentina",c:"+54"},{f:"🇦🇲",n:"Armenia",c:"+374"},{f:"🇦🇺",n:"Australia",c:"+61"},{f:"🇦🇹",n:"Austria",c:"+43"},{f:"🇦🇿",n:"Azerbaijan",c:"+994"},{f:"🇧🇸",n:"Bahamas",c:"+1-242"},{f:"🇧🇭",n:"Bahrain",c:"+973"},{f:"🇧🇩",n:"Bangladesh",c:"+880"},{f:"🇧🇧",n:"Barbados",c:"+1-246"},{f:"🇧🇾",n:"Belarus",c:"+375"},{f:"🇧🇪",n:"Belgium",c:"+32"},{f:"🇧🇿",n:"Belize",c:"+501"},{f:"🇧🇯",n:"Benin",c:"+229"},{f:"🇧🇹",n:"Bhutan",c:"+975"},{f:"🇧🇴",n:"Bolivia",c:"+591"},{f:"🇧🇦",n:"Bosnia",c:"+387"},{f:"🇧🇼",n:"Botswana",c:"+267"},{f:"🇧🇷",n:"Brazil",c:"+55"},{f:"🇧🇳",n:"Brunei",c:"+673"},{f:"🇧🇬",n:"Bulgaria",c:"+359"},{f:"🇧🇫",n:"Burkina Faso",c:"+226"},{f:"🇧🇮",n:"Burundi",c:"+257"},{f:"🇨🇻",n:"Cape Verde",c:"+238"},{f:"🇰🇭",n:"Cambodia",c:"+855"},{f:"🇨🇲",n:"Cameroon",c:"+237"},{f:"🇨🇦",n:"Canada",c:"+1"},{f:"🇨🇫",n:"Central African Rep.",c:"+236"},{f:"🇹🇩",n:"Chad",c:"+235"},{f:"🇨🇱",n:"Chile",c:"+56"},{f:"🇨🇳",n:"China",c:"+86"},{f:"🇨🇴",n:"Colombia",c:"+57"},{f:"🇰🇲",n:"Comoros",c:"+269"},{f:"🇨🇬",n:"Congo",c:"+242"},{f:"🇨🇷",n:"Costa Rica",c:"+506"},{f:"🇭🇷",n:"Croatia",c:"+385"},{f:"🇨🇺",n:"Cuba",c:"+53"},{f:"🇨🇾",n:"Cyprus",c:"+357"},{f:"🇨🇿",n:"Czech Republic",c:"+420"},{f:"🇩🇰",n:"Denmark",c:"+45"},{f:"🇩🇯",n:"Djibouti",c:"+253"},{f:"🇩🇴",n:"Dominican Rep.",c:"+1-809"},{f:"🇪🇨",n:"Ecuador",c:"+593"},{f:"🇪🇬",n:"Egypt",c:"+20"},{f:"🇸🇻",n:"El Salvador",c:"+503"},{f:"🇬🇶",n:"Equatorial Guinea",c:"+240"},{f:"🇪🇷",n:"Eritrea",c:"+291"},{f:"🇪🇪",n:"Estonia",c:"+372"},{f:"🇪🇹",n:"Ethiopia",c:"+251"},{f:"🇫🇯",n:"Fiji",c:"+679"},{f:"🇫🇮",n:"Finland",c:"+358"},{f:"🇫🇷",n:"France",c:"+33"},{f:"🇬🇦",n:"Gabon",c:"+241"},{f:"🇬🇲",n:"Gambia",c:"+220"},{f:"🇬🇪",n:"Georgia",c:"+995"},{f:"🇩🇪",n:"Germany",c:"+49"},{f:"🇬🇭",n:"Ghana",c:"+233"},{f:"🇬🇷",n:"Greece",c:"+30"},{f:"🇬🇩",n:"Grenada",c:"+1-473"},{f:"🇬🇹",n:"Guatemala",c:"+502"},{f:"🇬🇳",n:"Guinea",c:"+224"},{f:"🇬🇼",n:"Guinea-Bissau",c:"+245"},{f:"🇬🇾",n:"Guyana",c:"+592"},{f:"🇭🇹",n:"Haiti",c:"+509"},{f:"🇭🇳",n:"Honduras",c:"+504"},{f:"🇭🇺",n:"Hungary",c:"+36"},{f:"🇮🇸",n:"Iceland",c:"+354"},{f:"🇮🇳",n:"India",c:"+91"},{f:"🇮🇩",n:"Indonesia",c:"+62"},{f:"🇮🇷",n:"Iran",c:"+98"},{f:"🇮🇶",n:"Iraq",c:"+964"},{f:"🇮🇪",n:"Ireland",c:"+353"},{f:"🇮🇱",n:"Israel",c:"+972"},{f:"🇮🇹",n:"Italy",c:"+39"},{f:"🇯🇲",n:"Jamaica",c:"+1-876"},{f:"🇯🇵",n:"Japan",c:"+81"},{f:"🇯🇴",n:"Jordan",c:"+962"},{f:"🇰🇿",n:"Kazakhstan",c:"+7"},{f:"🇰🇪",n:"Kenya",c:"+254"},{f:"🇰🇼",n:"Kuwait",c:"+965"},{f:"🇰🇬",n:"Kyrgyzstan",c:"+996"},{f:"🇱🇦",n:"Laos",c:"+856"},{f:"🇱🇻",n:"Latvia",c:"+371"},{f:"🇱🇧",n:"Lebanon",c:"+961"},{f:"🇱🇸",n:"Lesotho",c:"+266"},{f:"🇱🇷",n:"Liberia",c:"+231"},{f:"🇱🇾",n:"Libya",c:"+218"},{f:"🇱🇮",n:"Liechtenstein",c:"+423"},{f:"🇱🇹",n:"Lithuania",c:"+370"},{f:"🇱🇺",n:"Luxembourg",c:"+352"},{f:"🇲🇬",n:"Madagascar",c:"+261"},{f:"🇲🇼",n:"Malawi",c:"+265"},{f:"🇲🇾",n:"Malaysia",c:"+60"},{f:"🇲🇻",n:"Maldives",c:"+960"},{f:"🇲🇱",n:"Mali",c:"+223"},{f:"🇲🇹",n:"Malta",c:"+356"},{f:"🇲🇷",n:"Mauritania",c:"+222"},{f:"🇲🇺",n:"Mauritius",c:"+230"},{f:"🇲🇽",n:"Mexico",c:"+52"},{f:"🇲🇩",n:"Moldova",c:"+373"},{f:"🇲🇨",n:"Monaco",c:"+377"},{f:"🇲🇳",n:"Mongolia",c:"+976"},{f:"🇲🇪",n:"Montenegro",c:"+382"},{f:"🇲🇦",n:"Morocco",c:"+212"},{f:"🇲🇿",n:"Mozambique",c:"+258"},{f:"🇲🇲",n:"Myanmar",c:"+95"},{f:"🇳🇦",n:"Namibia",c:"+264"},{f:"🇳🇵",n:"Nepal",c:"+977"},{f:"🇳🇱",n:"Netherlands",c:"+31"},{f:"🇳🇿",n:"New Zealand",c:"+64"},{f:"🇳🇮",n:"Nicaragua",c:"+505"},{f:"🇳🇪",n:"Niger",c:"+227"},{f:"🇳🇬",n:"Nigeria",c:"+234"},{f:"🇰🇵",n:"North Korea",c:"+850"},{f:"🇲🇰",n:"North Macedonia",c:"+389"},{f:"🇳🇴",n:"Norway",c:"+47"},{f:"🇴🇲",n:"Oman",c:"+968"},{f:"🇵🇰",n:"Pakistan",c:"+92"},{f:"🇵🇦",n:"Panama",c:"+507"},{f:"🇵🇬",n:"Papua New Guinea",c:"+675"},{f:"🇵🇾",n:"Paraguay",c:"+595"},{f:"🇵🇪",n:"Peru",c:"+51"},{f:"🇵🇭",n:"Philippines",c:"+63"},{f:"🇵🇱",n:"Poland",c:"+48"},{f:"🇵🇹",n:"Portugal",c:"+351"},{f:"🇶🇦",n:"Qatar",c:"+974"},{f:"🇷🇴",n:"Romania",c:"+40"},{f:"🇷🇺",n:"Russia",c:"+7"},{f:"🇷🇼",n:"Rwanda",c:"+250"},{f:"🇸🇦",n:"Saudi Arabia",c:"+966"},{f:"🇸🇳",n:"Senegal",c:"+221"},{f:"🇷🇸",n:"Serbia",c:"+381"},{f:"🇸🇱",n:"Sierra Leone",c:"+232"},{f:"🇸🇬",n:"Singapore",c:"+65"},{f:"🇸🇰",n:"Slovakia",c:"+421"},{f:"🇸🇮",n:"Slovenia",c:"+386"},{f:"🇸🇴",n:"Somalia",c:"+252"},{f:"🇿🇦",n:"South Africa",c:"+27"},{f:"🇰🇷",n:"South Korea",c:"+82"},{f:"🇸🇸",n:"South Sudan",c:"+211"},{f:"🇪🇸",n:"Spain",c:"+34"},{f:"🇱🇰",n:"Sri Lanka",c:"+94"},{f:"🇸🇩",n:"Sudan",c:"+249"},{f:"🇸🇷",n:"Suriname",c:"+597"},{f:"🇸🇿",n:"Eswatini",c:"+268"},{f:"🇸🇪",n:"Sweden",c:"+46"},{f:"🇨🇭",n:"Switzerland",c:"+41"},{f:"🇸🇾",n:"Syria",c:"+963"},{f:"🇹🇼",n:"Taiwan",c:"+886"},{f:"🇹🇯",n:"Tajikistan",c:"+992"},{f:"🇹🇿",n:"Tanzania",c:"+255"},{f:"🇹🇭",n:"Thailand",c:"+66"},{f:"🇹🇱",n:"Timor-Leste",c:"+670"},{f:"🇹🇬",n:"Togo",c:"+228"},{f:"🇹🇹",n:"Trinidad & Tobago",c:"+1-868"},{f:"🇹🇳",n:"Tunisia",c:"+216"},{f:"🇹🇷",n:"Turkey",c:"+90"},{f:"🇹🇲",n:"Turkmenistan",c:"+993"},{f:"🇺🇬",n:"Uganda",c:"+256"},{f:"🇺🇦",n:"Ukraine",c:"+380"},{f:"🇦🇪",n:"UAE",c:"+971"},{f:"🇬🇧",n:"United Kingdom",c:"+44"},{f:"🇺🇸",n:"United States",c:"+1"},{f:"🇺🇾",n:"Uruguay",c:"+598"},{f:"🇺🇿",n:"Uzbekistan",c:"+998"},{f:"🇻🇪",n:"Venezuela",c:"+58"},{f:"🇻🇳",n:"Vietnam",c:"+84"},{f:"🇾🇪",n:"Yemen",c:"+967"},{f:"🇿🇲",n:"Zambia",c:"+260"},{f:"🇿🇼",n:"Zimbabwe",c:"+263"}
+];
+
+const sel = document.getElementById('countryCode');
+countries.sort((a,b)=>a.n.localeCompare(b.n)).forEach(c=>{
+  const o = document.createElement('option');
+  o.value = c.c;
+  o.textContent = `${c.f} ${c.n} ${c.c}`;
+  if(c.c==='+971') o.selected = true;
+  sel.appendChild(o);
+});
+
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
-const observer = new IntersectionObserver((entries) => { entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); observer.unobserve(e.target); } }); }, {threshold:0.1, rootMargin:'0px 0px -60px 0px'});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target);}
+  });
+},{threshold:0.08,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
