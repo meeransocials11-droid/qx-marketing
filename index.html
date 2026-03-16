@@ -21,8 +21,10 @@ body{font-family:'Inter',sans-serif;background:#03070d;color:#e2e8f0;overflow-x:
 .grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:60px 60px}
 nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s ease}
 nav.scroll{background:rgba(3,7,13,0.95);backdrop-filter:blur(25px);border-bottom:1px solid rgba(139,92,246,0.15)}
-.logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
-.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#7c3aed,#db2777);display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px rgba(124,58,237,0.45);font-weight:900;color:#fff;font-size:0.9rem;letter-spacing:1px}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:44px;height:44px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(139,92,246,0.4);box-shadow:0 0 20px rgba(124,58,237,0.45),0 0 40px rgba(59,130,246,0.2);transition:box-shadow 0.4s ease;flex-shrink:0}
+.logo-img:hover{box-shadow:0 0 35px rgba(124,58,237,0.7),0 0 60px rgba(59,130,246,0.35)}
+.logo-img img{width:100%;height:100%;object-fit:cover;display:block}
 .logo-text{font-size:1.1rem;font-weight:800;letter-spacing:3px;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6,#60a5fa);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoGrad 6s linear infinite}
 @keyframes logoGrad{to{background-position:200% center}}
 .nav-menu{display:flex;gap:3rem;align-items:center}
@@ -88,7 +90,6 @@ h1{font-size:clamp(2.5rem,8vw,5.5rem);font-weight:900;line-height:1.05;letter-sp
 .input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25)}
 .input::placeholder{color:#475569}
 textarea.input{resize:vertical;min-height:130px}
-
 .phone-group{display:flex;gap:0;width:100%;position:relative}
 .custom-select{position:relative;min-width:160px}
 .selected-country{background:rgba(3,7,13,0.95);border:1.5px solid rgba(139,92,246,0.25);border-right:none;border-radius:11px 0 0 11px;padding:1rem 0.9rem;color:#e2e8f0;font-size:0.95rem;cursor:pointer;display:flex;align-items:center;gap:0.5rem;transition:all 0.3s;height:100%;white-space:nowrap;user-select:none}
@@ -113,11 +114,11 @@ textarea.input{resize:vertical;min-height:130px}
 .phone-input:focus{border-color:rgba(192,132,252,0.7);box-shadow:0 0 25px rgba(124,58,237,0.25)}
 .phone-input::placeholder{color:#475569}
 .hidden-phone{display:none}
-
 footer{position:relative;z-index:5;border-top:1px solid rgba(139,92,246,0.12);padding:3rem 5%;display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#475569;flex-wrap:wrap;gap:2rem}
 footer a{color:#7c3aed;text-decoration:none;transition:color 0.3s;font-weight:600}
 footer a:hover{color:#c084fc}
-.footer-logo{font-size:1.1rem;font-weight:900;background:linear-gradient(90deg,#60a5fa,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px}
+.footer-logo-img{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(139,92,246,0.3);box-shadow:0 0 12px rgba(124,58,237,0.3)}
+.footer-logo-img img{width:100%;height:100%;object-fit:cover;display:block}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1)}
 .reveal.in{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.services,.portfolio{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}nav{padding:0.9rem 3%}.section{padding:5rem 3%}.contact-container{padding:2.5rem 1.5rem}}
@@ -133,7 +134,7 @@ footer a:hover{color:#c084fc}
 
 <nav id="nav">
   <a class="logo" href="#home">
-    <div class="logo-icon">QX</div>
+    <div class="logo-img"><img src="logo.png" alt="QX Marketing"></div>
     <span class="logo-text">QX MARKETING</span>
   </a>
   <div class="nav-menu">
@@ -240,8 +241,8 @@ footer a:hover{color:#c084fc}
 </div>
 
 <footer>
-  <div style="display:flex;align-items:center;gap:0.8rem">
-    <span class="footer-logo">QX</span>
+  <div style="display:flex;align-items:center;gap:0.9rem">
+    <div class="footer-logo-img"><img src="logo.png" alt="QX"></div>
     <span>© 2025 QX Marketing. All rights reserved.</span>
   </div>
   <div style="display:flex;gap:2.5rem;flex-wrap:wrap">
@@ -255,11 +256,11 @@ footer a:hover{color:#c084fc}
 <script>
 const countries=[{f:"🇦🇫",n:"Afghanistan",c:"+93"},{f:"🇦🇱",n:"Albania",c:"+355"},{f:"🇩🇿",n:"Algeria",c:"+213"},{f:"🇦🇩",n:"Andorra",c:"+376"},{f:"🇦🇴",n:"Angola",c:"+244"},{f:"🇦🇬",n:"Antigua",c:"+1-268"},{f:"🇦🇷",n:"Argentina",c:"+54"},{f:"🇦🇲",n:"Armenia",c:"+374"},{f:"🇦🇺",n:"Australia",c:"+61"},{f:"🇦🇹",n:"Austria",c:"+43"},{f:"🇦🇿",n:"Azerbaijan",c:"+994"},{f:"🇧🇸",n:"Bahamas",c:"+1-242"},{f:"🇧🇭",n:"Bahrain",c:"+973"},{f:"🇧🇩",n:"Bangladesh",c:"+880"},{f:"🇧🇧",n:"Barbados",c:"+1-246"},{f:"🇧🇾",n:"Belarus",c:"+375"},{f:"🇧🇪",n:"Belgium",c:"+32"},{f:"🇧🇿",n:"Belize",c:"+501"},{f:"🇧🇯",n:"Benin",c:"+229"},{f:"🇧🇹",n:"Bhutan",c:"+975"},{f:"🇧🇴",n:"Bolivia",c:"+591"},{f:"🇧🇦",n:"Bosnia",c:"+387"},{f:"🇧🇼",n:"Botswana",c:"+267"},{f:"🇧🇷",n:"Brazil",c:"+55"},{f:"🇧🇳",n:"Brunei",c:"+673"},{f:"🇧🇬",n:"Bulgaria",c:"+359"},{f:"🇧🇫",n:"Burkina Faso",c:"+226"},{f:"🇧🇮",n:"Burundi",c:"+257"},{f:"🇨🇻",n:"Cape Verde",c:"+238"},{f:"🇰🇭",n:"Cambodia",c:"+855"},{f:"🇨🇲",n:"Cameroon",c:"+237"},{f:"🇨🇦",n:"Canada",c:"+1"},{f:"🇨🇫",n:"Central African Rep.",c:"+236"},{f:"🇹🇩",n:"Chad",c:"+235"},{f:"🇨🇱",n:"Chile",c:"+56"},{f:"🇨🇳",n:"China",c:"+86"},{f:"🇨🇴",n:"Colombia",c:"+57"},{f:"🇰🇲",n:"Comoros",c:"+269"},{f:"🇨🇬",n:"Congo",c:"+242"},{f:"🇨🇷",n:"Costa Rica",c:"+506"},{f:"🇭🇷",n:"Croatia",c:"+385"},{f:"🇨🇺",n:"Cuba",c:"+53"},{f:"🇨🇾",n:"Cyprus",c:"+357"},{f:"🇨🇿",n:"Czech Republic",c:"+420"},{f:"🇩🇰",n:"Denmark",c:"+45"},{f:"🇩🇯",n:"Djibouti",c:"+253"},{f:"🇩🇴",n:"Dominican Rep.",c:"+1-809"},{f:"🇪🇨",n:"Ecuador",c:"+593"},{f:"🇪🇬",n:"Egypt",c:"+20"},{f:"🇸🇻",n:"El Salvador",c:"+503"},{f:"🇬🇶",n:"Equatorial Guinea",c:"+240"},{f:"🇪🇷",n:"Eritrea",c:"+291"},{f:"🇪🇪",n:"Estonia",c:"+372"},{f:"🇪🇹",n:"Ethiopia",c:"+251"},{f:"🇫🇯",n:"Fiji",c:"+679"},{f:"🇫🇮",n:"Finland",c:"+358"},{f:"🇫🇷",n:"France",c:"+33"},{f:"🇬🇦",n:"Gabon",c:"+241"},{f:"🇬🇲",n:"Gambia",c:"+220"},{f:"🇬🇪",n:"Georgia",c:"+995"},{f:"🇩🇪",n:"Germany",c:"+49"},{f:"🇬🇭",n:"Ghana",c:"+233"},{f:"🇬🇷",n:"Greece",c:"+30"},{f:"🇬🇩",n:"Grenada",c:"+1-473"},{f:"🇬🇹",n:"Guatemala",c:"+502"},{f:"🇬🇳",n:"Guinea",c:"+224"},{f:"🇬🇼",n:"Guinea-Bissau",c:"+245"},{f:"🇬🇾",n:"Guyana",c:"+592"},{f:"🇭🇹",n:"Haiti",c:"+509"},{f:"🇭🇳",n:"Honduras",c:"+504"},{f:"🇭🇺",n:"Hungary",c:"+36"},{f:"🇮🇸",n:"Iceland",c:"+354"},{f:"🇮🇳",n:"India",c:"+91"},{f:"🇮🇩",n:"Indonesia",c:"+62"},{f:"🇮🇷",n:"Iran",c:"+98"},{f:"🇮🇶",n:"Iraq",c:"+964"},{f:"🇮🇪",n:"Ireland",c:"+353"},{f:"🇮🇱",n:"Israel",c:"+972"},{f:"🇮🇹",n:"Italy",c:"+39"},{f:"🇯🇲",n:"Jamaica",c:"+1-876"},{f:"🇯🇵",n:"Japan",c:"+81"},{f:"🇯🇴",n:"Jordan",c:"+962"},{f:"🇰🇿",n:"Kazakhstan",c:"+7"},{f:"🇰🇪",n:"Kenya",c:"+254"},{f:"🇰🇼",n:"Kuwait",c:"+965"},{f:"🇰🇬",n:"Kyrgyzstan",c:"+996"},{f:"🇱🇦",n:"Laos",c:"+856"},{f:"🇱🇻",n:"Latvia",c:"+371"},{f:"🇱🇧",n:"Lebanon",c:"+961"},{f:"🇱🇸",n:"Lesotho",c:"+266"},{f:"🇱🇷",n:"Liberia",c:"+231"},{f:"🇱🇾",n:"Libya",c:"+218"},{f:"🇱🇮",n:"Liechtenstein",c:"+423"},{f:"🇱🇹",n:"Lithuania",c:"+370"},{f:"🇱🇺",n:"Luxembourg",c:"+352"},{f:"🇲🇬",n:"Madagascar",c:"+261"},{f:"🇲🇼",n:"Malawi",c:"+265"},{f:"🇲🇾",n:"Malaysia",c:"+60"},{f:"🇲🇻",n:"Maldives",c:"+960"},{f:"🇲🇱",n:"Mali",c:"+223"},{f:"🇲🇹",n:"Malta",c:"+356"},{f:"🇲🇷",n:"Mauritania",c:"+222"},{f:"🇲🇺",n:"Mauritius",c:"+230"},{f:"🇲🇽",n:"Mexico",c:"+52"},{f:"🇲🇩",n:"Moldova",c:"+373"},{f:"🇲🇨",n:"Monaco",c:"+377"},{f:"🇲🇳",n:"Mongolia",c:"+976"},{f:"🇲🇪",n:"Montenegro",c:"+382"},{f:"🇲🇦",n:"Morocco",c:"+212"},{f:"🇲🇿",n:"Mozambique",c:"+258"},{f:"🇲🇲",n:"Myanmar",c:"+95"},{f:"🇳🇦",n:"Namibia",c:"+264"},{f:"🇳🇵",n:"Nepal",c:"+977"},{f:"🇳🇱",n:"Netherlands",c:"+31"},{f:"🇳🇿",n:"New Zealand",c:"+64"},{f:"🇳🇮",n:"Nicaragua",c:"+505"},{f:"🇳🇪",n:"Niger",c:"+227"},{f:"🇳🇬",n:"Nigeria",c:"+234"},{f:"🇰🇵",n:"North Korea",c:"+850"},{f:"🇲🇰",n:"North Macedonia",c:"+389"},{f:"🇳🇴",n:"Norway",c:"+47"},{f:"🇴🇲",n:"Oman",c:"+968"},{f:"🇵🇰",n:"Pakistan",c:"+92"},{f:"🇵🇦",n:"Panama",c:"+507"},{f:"🇵🇬",n:"Papua New Guinea",c:"+675"},{f:"🇵🇾",n:"Paraguay",c:"+595"},{f:"🇵🇪",n:"Peru",c:"+51"},{f:"🇵🇭",n:"Philippines",c:"+63"},{f:"🇵🇱",n:"Poland",c:"+48"},{f:"🇵🇹",n:"Portugal",c:"+351"},{f:"🇶🇦",n:"Qatar",c:"+974"},{f:"🇷🇴",n:"Romania",c:"+40"},{f:"🇷🇺",n:"Russia",c:"+7"},{f:"🇷🇼",n:"Rwanda",c:"+250"},{f:"🇸🇦",n:"Saudi Arabia",c:"+966"},{f:"🇸🇳",n:"Senegal",c:"+221"},{f:"🇷🇸",n:"Serbia",c:"+381"},{f:"🇸🇱",n:"Sierra Leone",c:"+232"},{f:"🇸🇬",n:"Singapore",c:"+65"},{f:"🇸🇰",n:"Slovakia",c:"+421"},{f:"🇸🇮",n:"Slovenia",c:"+386"},{f:"🇸🇴",n:"Somalia",c:"+252"},{f:"🇿🇦",n:"South Africa",c:"+27"},{f:"🇰🇷",n:"South Korea",c:"+82"},{f:"🇸🇸",n:"South Sudan",c:"+211"},{f:"🇪🇸",n:"Spain",c:"+34"},{f:"🇱🇰",n:"Sri Lanka",c:"+94"},{f:"🇸🇩",n:"Sudan",c:"+249"},{f:"🇸🇷",n:"Suriname",c:"+597"},{f:"🇸🇿",n:"Eswatini",c:"+268"},{f:"🇸🇪",n:"Sweden",c:"+46"},{f:"🇨🇭",n:"Switzerland",c:"+41"},{f:"🇸🇾",n:"Syria",c:"+963"},{f:"🇹🇼",n:"Taiwan",c:"+886"},{f:"🇹🇯",n:"Tajikistan",c:"+992"},{f:"🇹🇿",n:"Tanzania",c:"+255"},{f:"🇹🇭",n:"Thailand",c:"+66"},{f:"🇹🇱",n:"Timor-Leste",c:"+670"},{f:"🇹🇬",n:"Togo",c:"+228"},{f:"🇹🇹",n:"Trinidad & Tobago",c:"+1-868"},{f:"🇹🇳",n:"Tunisia",c:"+216"},{f:"🇹🇷",n:"Turkey",c:"+90"},{f:"🇹🇲",n:"Turkmenistan",c:"+993"},{f:"🇺🇬",n:"Uganda",c:"+256"},{f:"🇺🇦",n:"Ukraine",c:"+380"},{f:"🇦🇪",n:"UAE",c:"+971"},{f:"🇬🇧",n:"United Kingdom",c:"+44"},{f:"🇺🇸",n:"United States",c:"+1"},{f:"🇺🇾",n:"Uruguay",c:"+598"},{f:"🇺🇿",n:"Uzbekistan",c:"+998"},{f:"🇻🇪",n:"Venezuela",c:"+58"},{f:"🇻🇳",n:"Vietnam",c:"+84"},{f:"🇾🇪",n:"Yemen",c:"+967"},{f:"🇿🇲",n:"Zambia",c:"+260"},{f:"🇿🇼",n:"Zimbabwe",c:"+263"}];
 
-let selectedCountry = countries.find(c=>c.c==='+971');
-const sorted = [...countries].sort((a,b)=>a.n.localeCompare(b.n));
+let selectedCountry=countries.find(c=>c.c==='+971');
+const sorted=[...countries].sort((a,b)=>a.n.localeCompare(b.n));
 
 function renderOptions(list){
-  const container = document.getElementById('countryOptions');
+  const container=document.getElementById('countryOptions');
   container.innerHTML='';
   list.forEach(c=>{
     const div=document.createElement('div');
@@ -289,7 +290,7 @@ document.getElementById('selectedCountry').onclick=function(e){
   e.stopPropagation();
   this.classList.toggle('open');
   document.getElementById('dropdownList').classList.toggle('open');
-  document.getElementById('searchInput').focus();
+  setTimeout(()=>document.getElementById('searchInput').focus(),100);
 };
 
 document.getElementById('searchInput').oninput=function(){
@@ -306,9 +307,7 @@ document.addEventListener('click',function(e){
   }
 });
 
-document.getElementById('contactForm').onsubmit=function(){
-  updateFullPhone();
-};
+document.getElementById('contactForm').onsubmit=function(){updateFullPhone();};
 
 renderOptions(sorted);
 
