@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z9NLGLTLP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8Z9NLGLTLP');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- PRIMARY SEO -->
 <title>QX Marketing | Metaverse & Web Agency</title>
 <meta name="description" content="QX Marketing is a cutting-edge digital agency specializing in metaverse experiences, web development, brand identity, mobile apps, and growth strategy. Build your brand for the future.">
 <meta name="keywords" content="QX Marketing, metaverse agency, web development agency, brand identity, digital marketing, web3, mobile app development, growth strategy, immersive experiences">
 <meta name="author" content="QX Marketing">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
 <link rel="canonical" href="https://qx-marketing.vercel.app/">
-
-<!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qx-marketing.vercel.app/">
 <meta property="og:title" content="QX Marketing | Metaverse & Web Agency">
 <meta property="og:description" content="QX Marketing crafts immersive web experiences and metaverse strategies that move people — and move business forward.">
 <meta property="og:image" content="https://qx-marketing.vercel.app/logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="QX Marketing">
-<meta property="og:locale" content="en_US">
-
-<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://qx-marketing.vercel.app/">
 <meta name="twitter:title" content="QX Marketing | Metaverse & Web Agency">
 <meta name="twitter:description" content="QX Marketing crafts immersive web experiences and metaverse strategies that move people — and move business forward.">
 <meta name="twitter:image" content="https://qx-marketing.vercel.app/logo.png">
-
-<!-- FAVICON -->
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-
-<!-- SCHEMA MARKUP (Google Rich Results) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,15 +39,6 @@
   "description": "QX Marketing is a cutting-edge digital agency specializing in metaverse experiences, web development, brand identity, mobile apps, and growth strategy.",
   "email": "hello@qxmarketing.com",
   "foundingDate": "2024",
-  "sameAs": [],
-  "serviceType": [
-    "Web Development",
-    "Metaverse Experiences",
-    "Brand Identity",
-    "Mobile App Development",
-    "Motion & Content",
-    "Growth Strategy"
-  ],
   "areaServed": "Worldwide",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -65,7 +48,6 @@
   }
 }
 </script>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -163,7 +145,7 @@ textarea.inp{resize:vertical;min-height:125px}
 .dl::-webkit-scrollbar-thumb{background:rgba(124,58,237,0.38);border-radius:2px}
 .si{width:100%;background:rgba(3,7,13,0.8);border:none;border-bottom:1px solid rgba(139,92,246,0.18);padding:0.7rem 0.95rem;color:#e2e8f0;font-size:0.86rem;font-family:'Inter',sans-serif;outline:none}
 .si::placeholder{color:#475569}
-.co{padding:0.65rem 0.95rem;display:flex;align-items:center;gap:0.7rem;cursor:pointer;transition:background 0.18s ease;font-size:0.88rem}
+.co{padding:0.65rem 0.95rem;display:flex;align-items:center;gap:0.7rem;cursor:pointer;transition:background 0.18s ease}
 .co:hover{background:rgba(124,58,237,0.18)}
 .co.active{background:rgba(124,58,237,0.22)}
 .fl{font-size:1.25rem;line-height:1}
@@ -185,7 +167,6 @@ footer a:hover{color:#c084fc}
 </style>
 </head>
 <body>
-
 <canvas id="bg"></canvas>
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
@@ -201,41 +182,41 @@ footer a:hover{color:#c084fc}
     <a href="#services">Services</a>
     <a href="#work">Work</a>
     <a href="#contact">Contact</a>
-    <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Get Started with QX Marketing">Get Started</button>
+    <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
   </div>
 </nav>
 
 <main>
-<section class="hero" id="home" aria-label="Hero section">
+<section class="hero" id="home">
   <div class="hero-box">
     <div class="hero-tag"><span class="dot"></span>Metaverse • Web • Strategy</div>
     <h1><span class="t1">We Build Brands</span><span class="t2">for the Future</span></h1>
     <p class="hero-sub">QX Marketing crafts immersive web experiences and metaverse strategies that move people — and move business forward.</p>
     <div class="btns">
-      <button class="bp" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Start a project with QX Marketing">Start a Project</button>
-      <button class="bs" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" aria-label="See QX Marketing work">See Our Work</button>
+      <button class="bp" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a Project</button>
+      <button class="bs" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">See Our Work</button>
     </div>
-    <div class="scrl" aria-hidden="true"><div class="scrl-line"></div></div>
+    <div class="scrl"><div class="scrl-line"></div></div>
   </div>
 </section>
 
-<section id="services" class="sec" aria-label="Our services">
+<section id="services" class="sec">
   <div class="rv">
     <div class="sl">What We Do</div>
     <h2 class="st">Built for the digital frontier</h2>
     <p class="sd">From metaverse-ready experiences to high-conversion websites — QX delivers across every channel.</p>
     <div class="sgrid">
-      <article class="card rv"><div class="ci" aria-hidden="true">🌐</div><h3>Web Development</h3><p>Blazing-fast, beautifully crafted websites with seamless interactions and pixel-perfect design.</p><span class="ctag">→ Web3 Ready</span></article>
-      <article class="card rv"><div class="ci" aria-hidden="true">🎮</div><h3>Metaverse Experiences</h3><p>Immersive virtual spaces where your brand lives, breathes, and connects in new dimensions.</p><span class="ctag">→ Spatial Design</span></article>
-      <article class="card rv"><div class="ci" aria-hidden="true">✦</div><h3>Brand Identity</h3><p>Bold, memorable visual systems built from the ground up — logos, motion, language, and more.</p><span class="ctag">→ Full Systems</span></article>
-      <article class="card rv"><div class="ci" aria-hidden="true">📱</div><h3>Mobile & App</h3><p>Responsive, native-feeling apps that work beautifully across every screen and device.</p><span class="ctag">→ iOS & Android</span></article>
-      <article class="card rv"><div class="ci" aria-hidden="true">🎬</div><h3>Motion & Content</h3><p>Cinematic videos, 3D animations, and interactive content that tell your story unforgettably.</p><span class="ctag">→ 3D + Motion</span></article>
-      <article class="card rv"><div class="ci" aria-hidden="true">📊</div><h3>Growth Strategy</h3><p>Data-driven campaigns and go-to-market strategies engineered to grow at scale.</p><span class="ctag">→ Performance</span></article>
+      <article class="card rv"><div class="ci">🌐</div><h3>Web Development</h3><p>Blazing-fast, beautifully crafted websites with seamless interactions and pixel-perfect design.</p><span class="ctag">→ Web3 Ready</span></article>
+      <article class="card rv"><div class="ci">🎮</div><h3>Metaverse Experiences</h3><p>Immersive virtual spaces where your brand lives, breathes, and connects in new dimensions.</p><span class="ctag">→ Spatial Design</span></article>
+      <article class="card rv"><div class="ci">✦</div><h3>Brand Identity</h3><p>Bold, memorable visual systems built from the ground up — logos, motion, language, and more.</p><span class="ctag">→ Full Systems</span></article>
+      <article class="card rv"><div class="ci">📱</div><h3>Mobile & App</h3><p>Responsive, native-feeling apps that work beautifully across every screen and device.</p><span class="ctag">→ iOS & Android</span></article>
+      <article class="card rv"><div class="ci">🎬</div><h3>Motion & Content</h3><p>Cinematic videos, 3D animations, and interactive content that tell your story unforgettably.</p><span class="ctag">→ 3D + Motion</span></article>
+      <article class="card rv"><div class="ci">📊</div><h3>Growth Strategy</h3><p>Data-driven campaigns and go-to-market strategies engineered to grow at scale.</p><span class="ctag">→ Performance</span></article>
     </div>
   </div>
 </section>
 
-<section class="stats-sec" aria-label="Company statistics">
+<section class="stats-sec">
   <div class="sec" style="padding:6rem 5%">
     <div class="rv" style="text-align:center;margin-bottom:2rem">
       <div class="sl">By the numbers</div>
@@ -250,22 +231,22 @@ footer a:hover{color:#c084fc}
   </div>
 </section>
 
-<section id="work" class="sec" aria-label="Portfolio">
+<section id="work" class="sec">
   <div class="rv">
     <div class="sl">Selected Work</div>
     <h2 class="st">Projects we're proud of</h2>
     <div class="pgrid">
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0f1f4a,#1e3a8a)" role="img" aria-label="NexaVerse Platform project"><div class="porb" style="width:200px;height:200px;background:#3b82f6;top:-70px;right:-35px"></div><div class="porb" style="width:120px;height:120px;background:#7c3aed;bottom:5px;left:10px"></div></div><div class="pi"><h4>NexaVerse Platform</h4><span>Metaverse Experience</span></div></article>
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#1a0a2e,#4c1d95)" role="img" aria-label="Luminary Commerce project"><div class="porb" style="width:185px;height:185px;background:#8b5cf6;top:-45px;left:-35px"></div><div class="porb" style="width:105px;height:105px;background:#f472b6;bottom:10px;right:10px"></div></div><div class="pi"><h4>Luminary Commerce</h4><span>Web Development</span></div></article>
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0c1a3d,#1e3a8a)" role="img" aria-label="PulseAI Dashboard project"><div class="porb" style="width:165px;height:165px;background:#2563eb;top:-35px;right:10px"></div><div class="porb" style="width:115px;height:115px;background:#c084fc;bottom:-8px;left:20px"></div></div><div class="pi"><h4>PulseAI Dashboard</h4><span>SaaS Product</span></div></article>
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69)" role="img" aria-label="Kova Brand System project"><div class="porb" style="width:175px;height:175px;background:#7c3aed;top:-28px;left:45px"></div><div class="porb" style="width:95px;height:95px;background:#f472b6;bottom:10px;right:10px"></div></div><div class="pi"><h4>Kova Brand System</h4><span>Brand Identity</span></div></article>
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0c1a3d,#1a0a2e)" role="img" aria-label="VR Showroom project"><div class="porb" style="width:160px;height:160px;background:#3b82f6;top:-28px;right:18px"></div><div class="porb" style="width:125px;height:125px;background:#c084fc;bottom:5px;left:8px"></div></div><div class="pi"><h4>VR Showroom</h4><span>Immersive Experience</span></div></article>
-      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#240040,#4c1d95)" role="img" aria-label="Orbit Mobile App project"><div class="porb" style="width:195px;height:195px;background:#9333ea;top:-55px;left:-18px"></div><div class="porb" style="width:105px;height:105px;background:#f472b6;bottom:5px;right:5px"></div></div><div class="pi"><h4>Orbit Mobile App</h4><span>Mobile Development</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0f1f4a,#1e3a8a)"><div class="porb" style="width:200px;height:200px;background:#3b82f6;top:-70px;right:-35px"></div><div class="porb" style="width:120px;height:120px;background:#7c3aed;bottom:5px;left:10px"></div></div><div class="pi"><h4>NexaVerse Platform</h4><span>Metaverse Experience</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#1a0a2e,#4c1d95)"><div class="porb" style="width:185px;height:185px;background:#8b5cf6;top:-45px;left:-35px"></div><div class="porb" style="width:105px;height:105px;background:#f472b6;bottom:10px;right:10px"></div></div><div class="pi"><h4>Luminary Commerce</h4><span>Web Development</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0c1a3d,#1e3a8a)"><div class="porb" style="width:165px;height:165px;background:#2563eb;top:-35px;right:10px"></div><div class="porb" style="width:115px;height:115px;background:#c084fc;bottom:-8px;left:20px"></div></div><div class="pi"><h4>PulseAI Dashboard</h4><span>SaaS Product</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69)"><div class="porb" style="width:175px;height:175px;background:#7c3aed;top:-28px;left:45px"></div><div class="porb" style="width:95px;height:95px;background:#f472b6;bottom:10px;right:10px"></div></div><div class="pi"><h4>Kova Brand System</h4><span>Brand Identity</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#0c1a3d,#1a0a2e)"><div class="porb" style="width:160px;height:160px;background:#3b82f6;top:-28px;right:18px"></div><div class="porb" style="width:125px;height:125px;background:#c084fc;bottom:5px;left:8px"></div></div><div class="pi"><h4>VR Showroom</h4><span>Immersive Experience</span></div></article>
+      <article class="pc rv"><div class="pv" style="background:linear-gradient(135deg,#240040,#4c1d95)"><div class="porb" style="width:195px;height:195px;background:#9333ea;top:-55px;left:-18px"></div><div class="porb" style="width:105px;height:105px;background:#f472b6;bottom:5px;right:5px"></div></div><div class="pi"><h4>Orbit Mobile App</h4><span>Mobile Development</span></div></article>
     </div>
   </div>
 </section>
 
-<section id="contact" class="csec" aria-label="Contact form">
+<section id="contact" class="csec">
   <div class="sec">
     <div class="rv" style="text-align:center;margin-bottom:1rem">
       <div class="sl">Let's work together</div>
@@ -273,19 +254,19 @@ footer a:hover{color:#c084fc}
       <p style="color:#64748b;font-size:0.97rem">Tell us about your project. We'll get back within 24 hours.</p>
     </div>
     <div class="cbox">
-      <form class="form" action="https://formspree.io/f/maqpdzgl" method="POST" id="cf" aria-label="Contact form">
-        <input class="inp" type="text" name="name" placeholder="Your full name" required aria-label="Full name">
-        <input class="inp" type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-        <div class="pg" role="group" aria-label="Phone number with country code">
+      <form class="form" action="https://formspree.io/f/maqpdzgl" method="POST" id="cf">
+        <input class="inp" type="text" name="name" placeholder="Your full name" required>
+        <input class="inp" type="email" name="email" placeholder="your@email.com" required>
+        <div class="pg">
           <div class="csel" id="csel">
-            <div class="sc" id="sc" role="button" aria-haspopup="listbox" aria-label="Select country code"><span class="fl" id="sf">🇦🇪</span><span id="scode">+971</span><span class="arr" aria-hidden="true">▼</span></div>
-            <div class="dl" id="dl" role="listbox"><input class="si" type="text" id="si" placeholder="Search country..." aria-label="Search country"><div id="copts"></div></div>
+            <div class="sc" id="sc"><span class="fl" id="sf">🇦🇪</span><span id="scode">+971</span><span class="arr">▼</span></div>
+            <div class="dl" id="dl"><input class="si" type="text" id="si" placeholder="Search country..."><div id="copts"></div></div>
           </div>
-          <input class="pi2" type="tel" id="pnum" placeholder="Phone number" required aria-label="Phone number">
+          <input class="pi2" type="tel" id="pnum" placeholder="Phone number" required>
           <input class="hp" type="hidden" name="phone" id="fp">
         </div>
-        <textarea class="inp" name="message" placeholder="Tell us about your project..." required aria-label="Project description"></textarea>
-        <button class="bp" type="submit" style="width:100%;padding:1rem;font-size:0.97rem" aria-label="Send message to QX Marketing">Send Message</button>
+        <textarea class="inp" name="message" placeholder="Tell us about your project..." required></textarea>
+        <button class="bp" type="submit" style="width:100%;padding:1rem;font-size:0.97rem">Send Message</button>
       </form>
     </div>
   </div>
@@ -298,7 +279,7 @@ footer a:hover{color:#c084fc}
     <span>© 2025 QX Marketing. All rights reserved.</span>
   </div>
   <div style="display:flex;gap:2.2rem;flex-wrap:wrap">
-    <a href="mailto:hello@qxmarketing.com" aria-label="Email QX Marketing">hello@qxmarketing.com</a>
+    <a href="mailto:hello@qxmarketing.com">hello@qxmarketing.com</a>
     <a href="#services">Services</a>
     <a href="#work">Work</a>
     <a href="#contact">Contact</a>
@@ -321,11 +302,10 @@ function drawLines(){for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j+
 let last=0;
 function frame(ts){if(ts-last<16.7){requestAnimationFrame(frame);return;}last=ts;ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.step();p.draw();});drawLines();stars.forEach(s=>{s.step();s.draw();});rings.forEach(r=>{r.step();r.draw();});requestAnimationFrame(frame);}
 requestAnimationFrame(frame);
-
 const countries=[{f:"🇦🇫",n:"Afghanistan",c:"+93"},{f:"🇦🇱",n:"Albania",c:"+355"},{f:"🇩🇿",n:"Algeria",c:"+213"},{f:"🇦🇩",n:"Andorra",c:"+376"},{f:"🇦🇴",n:"Angola",c:"+244"},{f:"🇦🇬",n:"Antigua",c:"+1-268"},{f:"🇦🇷",n:"Argentina",c:"+54"},{f:"🇦🇲",n:"Armenia",c:"+374"},{f:"🇦🇺",n:"Australia",c:"+61"},{f:"🇦🇹",n:"Austria",c:"+43"},{f:"🇦🇿",n:"Azerbaijan",c:"+994"},{f:"🇧🇸",n:"Bahamas",c:"+1-242"},{f:"🇧🇭",n:"Bahrain",c:"+973"},{f:"🇧🇩",n:"Bangladesh",c:"+880"},{f:"🇧🇧",n:"Barbados",c:"+1-246"},{f:"🇧🇾",n:"Belarus",c:"+375"},{f:"🇧🇪",n:"Belgium",c:"+32"},{f:"🇧🇿",n:"Belize",c:"+501"},{f:"🇧🇯",n:"Benin",c:"+229"},{f:"🇧🇹",n:"Bhutan",c:"+975"},{f:"🇧🇴",n:"Bolivia",c:"+591"},{f:"🇧🇦",n:"Bosnia",c:"+387"},{f:"🇧🇼",n:"Botswana",c:"+267"},{f:"🇧🇷",n:"Brazil",c:"+55"},{f:"🇧🇳",n:"Brunei",c:"+673"},{f:"🇧🇬",n:"Bulgaria",c:"+359"},{f:"🇧🇫",n:"Burkina Faso",c:"+226"},{f:"🇧🇮",n:"Burundi",c:"+257"},{f:"🇨🇻",n:"Cape Verde",c:"+238"},{f:"🇰🇭",n:"Cambodia",c:"+855"},{f:"🇨🇲",n:"Cameroon",c:"+237"},{f:"🇨🇦",n:"Canada",c:"+1"},{f:"🇨🇫",n:"Central African Rep.",c:"+236"},{f:"🇹🇩",n:"Chad",c:"+235"},{f:"🇨🇱",n:"Chile",c:"+56"},{f:"🇨🇳",n:"China",c:"+86"},{f:"🇨🇴",n:"Colombia",c:"+57"},{f:"🇰🇲",n:"Comoros",c:"+269"},{f:"🇨🇬",n:"Congo",c:"+242"},{f:"🇨🇷",n:"Costa Rica",c:"+506"},{f:"🇭🇷",n:"Croatia",c:"+385"},{f:"🇨🇺",n:"Cuba",c:"+53"},{f:"🇨🇾",n:"Cyprus",c:"+357"},{f:"🇨🇿",n:"Czech Republic",c:"+420"},{f:"🇩🇰",n:"Denmark",c:"+45"},{f:"🇩🇯",n:"Djibouti",c:"+253"},{f:"🇩🇴",n:"Dominican Rep.",c:"+1-809"},{f:"🇪🇨",n:"Ecuador",c:"+593"},{f:"🇪🇬",n:"Egypt",c:"+20"},{f:"🇸🇻",n:"El Salvador",c:"+503"},{f:"🇬🇶",n:"Equatorial Guinea",c:"+240"},{f:"🇪🇷",n:"Eritrea",c:"+291"},{f:"🇪🇪",n:"Estonia",c:"+372"},{f:"🇪🇹",n:"Ethiopia",c:"+251"},{f:"🇫🇯",n:"Fiji",c:"+679"},{f:"🇫🇮",n:"Finland",c:"+358"},{f:"🇫🇷",n:"France",c:"+33"},{f:"🇬🇦",n:"Gabon",c:"+241"},{f:"🇬🇲",n:"Gambia",c:"+220"},{f:"🇬🇪",n:"Georgia",c:"+995"},{f:"🇩🇪",n:"Germany",c:"+49"},{f:"🇬🇭",n:"Ghana",c:"+233"},{f:"🇬🇷",n:"Greece",c:"+30"},{f:"🇬🇩",n:"Grenada",c:"+1-473"},{f:"🇬🇹",n:"Guatemala",c:"+502"},{f:"🇬🇳",n:"Guinea",c:"+224"},{f:"🇬🇼",n:"Guinea-Bissau",c:"+245"},{f:"🇬🇾",n:"Guyana",c:"+592"},{f:"🇭🇹",n:"Haiti",c:"+509"},{f:"🇭🇳",n:"Honduras",c:"+504"},{f:"🇭🇺",n:"Hungary",c:"+36"},{f:"🇮🇸",n:"Iceland",c:"+354"},{f:"🇮🇳",n:"India",c:"+91"},{f:"🇮🇩",n:"Indonesia",c:"+62"},{f:"🇮🇷",n:"Iran",c:"+98"},{f:"🇮🇶",n:"Iraq",c:"+964"},{f:"🇮🇪",n:"Ireland",c:"+353"},{f:"🇮🇱",n:"Israel",c:"+972"},{f:"🇮🇹",n:"Italy",c:"+39"},{f:"🇯🇲",n:"Jamaica",c:"+1-876"},{f:"🇯🇵",n:"Japan",c:"+81"},{f:"🇯🇴",n:"Jordan",c:"+962"},{f:"🇰🇿",n:"Kazakhstan",c:"+7"},{f:"🇰🇪",n:"Kenya",c:"+254"},{f:"🇰🇼",n:"Kuwait",c:"+965"},{f:"🇰🇬",n:"Kyrgyzstan",c:"+996"},{f:"🇱🇦",n:"Laos",c:"+856"},{f:"🇱🇻",n:"Latvia",c:"+371"},{f:"🇱🇧",n:"Lebanon",c:"+961"},{f:"🇱🇸",n:"Lesotho",c:"+266"},{f:"🇱🇷",n:"Liberia",c:"+231"},{f:"🇱🇾",n:"Libya",c:"+218"},{f:"🇱🇮",n:"Liechtenstein",c:"+423"},{f:"🇱🇹",n:"Lithuania",c:"+370"},{f:"🇱🇺",n:"Luxembourg",c:"+352"},{f:"🇲🇬",n:"Madagascar",c:"+261"},{f:"🇲🇼",n:"Malawi",c:"+265"},{f:"🇲🇾",n:"Malaysia",c:"+60"},{f:"🇲🇻",n:"Maldives",c:"+960"},{f:"🇲🇱",n:"Mali",c:"+223"},{f:"🇲🇹",n:"Malta",c:"+356"},{f:"🇲🇷",n:"Mauritania",c:"+222"},{f:"🇲🇺",n:"Mauritius",c:"+230"},{f:"🇲🇽",n:"Mexico",c:"+52"},{f:"🇲🇩",n:"Moldova",c:"+373"},{f:"🇲🇨",n:"Monaco",c:"+377"},{f:"🇲🇳",n:"Mongolia",c:"+976"},{f:"🇲🇪",n:"Montenegro",c:"+382"},{f:"🇲🇦",n:"Morocco",c:"+212"},{f:"🇲🇿",n:"Mozambique",c:"+258"},{f:"🇲🇲",n:"Myanmar",c:"+95"},{f:"🇳🇦",n:"Namibia",c:"+264"},{f:"🇳🇵",n:"Nepal",c:"+977"},{f:"🇳🇱",n:"Netherlands",c:"+31"},{f:"🇳🇿",n:"New Zealand",c:"+64"},{f:"🇳🇮",n:"Nicaragua",c:"+505"},{f:"🇳🇪",n:"Niger",c:"+227"},{f:"🇳🇬",n:"Nigeria",c:"+234"},{f:"🇰🇵",n:"North Korea",c:"+850"},{f:"🇲🇰",n:"North Macedonia",c:"+389"},{f:"🇳🇴",n:"Norway",c:"+47"},{f:"🇴🇲",n:"Oman",c:"+968"},{f:"🇵🇰",n:"Pakistan",c:"+92"},{f:"🇵🇦",n:"Panama",c:"+507"},{f:"🇵🇬",n:"Papua New Guinea",c:"+675"},{f:"🇵🇾",n:"Paraguay",c:"+595"},{f:"🇵🇪",n:"Peru",c:"+51"},{f:"🇵🇭",n:"Philippines",c:"+63"},{f:"🇵🇱",n:"Poland",c:"+48"},{f:"🇵🇹",n:"Portugal",c:"+351"},{f:"🇶🇦",n:"Qatar",c:"+974"},{f:"🇷🇴",n:"Romania",c:"+40"},{f:"🇷🇺",n:"Russia",c:"+7"},{f:"🇷🇼",n:"Rwanda",c:"+250"},{f:"🇸🇦",n:"Saudi Arabia",c:"+966"},{f:"🇸🇳",n:"Senegal",c:"+221"},{f:"🇷🇸",n:"Serbia",c:"+381"},{f:"🇸🇱",n:"Sierra Leone",c:"+232"},{f:"🇸🇬",n:"Singapore",c:"+65"},{f:"🇸🇰",n:"Slovakia",c:"+421"},{f:"🇸🇮",n:"Slovenia",c:"+386"},{f:"🇸🇴",n:"Somalia",c:"+252"},{f:"🇿🇦",n:"South Africa",c:"+27"},{f:"🇰🇷",n:"South Korea",c:"+82"},{f:"🇸🇸",n:"South Sudan",c:"+211"},{f:"🇪🇸",n:"Spain",c:"+34"},{f:"🇱🇰",n:"Sri Lanka",c:"+94"},{f:"🇸🇩",n:"Sudan",c:"+249"},{f:"🇸🇷",n:"Suriname",c:"+597"},{f:"🇸🇿",n:"Eswatini",c:"+268"},{f:"🇸🇪",n:"Sweden",c:"+46"},{f:"🇨🇭",n:"Switzerland",c:"+41"},{f:"🇸🇾",n:"Syria",c:"+963"},{f:"🇹🇼",n:"Taiwan",c:"+886"},{f:"🇹🇯",n:"Tajikistan",c:"+992"},{f:"🇹🇿",n:"Tanzania",c:"+255"},{f:"🇹🇭",n:"Thailand",c:"+66"},{f:"🇹🇱",n:"Timor-Leste",c:"+670"},{f:"🇹🇬",n:"Togo",c:"+228"},{f:"🇹🇹",n:"Trinidad & Tobago",c:"+1-868"},{f:"🇹🇳",n:"Tunisia",c:"+216"},{f:"🇹🇷",n:"Turkey",c:"+90"},{f:"🇹🇲",n:"Turkmenistan",c:"+993"},{f:"🇺🇬",n:"Uganda",c:"+256"},{f:"🇺🇦",n:"Ukraine",c:"+380"},{f:"🇦🇪",n:"UAE",c:"+971"},{f:"🇬🇧",n:"United Kingdom",c:"+44"},{f:"🇺🇸",n:"United States",c:"+1"},{f:"🇺🇾",n:"Uruguay",c:"+598"},{f:"🇺🇿",n:"Uzbekistan",c:"+998"},{f:"🇻🇪",n:"Venezuela",c:"+58"},{f:"🇻🇳",n:"Vietnam",c:"+84"},{f:"🇾🇪",n:"Yemen",c:"+967"},{f:"🇿🇲",n:"Zambia",c:"+260"},{f:"🇿🇼",n:"Zimbabwe",c:"+263"}];
 let sel=countries.find(x=>x.c==='+971');
 const srt=[...countries].sort((a,b)=>a.n.localeCompare(b.n));
-function ro(list){const ct=document.getElementById('copts');ct.innerHTML='';list.forEach(c=>{const d=document.createElement('div');d.className='co'+(c.c===sel.c?' active':'');d.setAttribute('role','option');d.innerHTML=`<span class="fl">${c.f}</span><span class="cn">${c.n}</span><span class="dc">${c.c}</span>`;d.onclick=()=>{sel=c;document.getElementById('sf').textContent=c.f;document.getElementById('scode').textContent=c.c;document.getElementById('dl').classList.remove('open');document.getElementById('sc').classList.remove('open');ufp();ro(srt);};ct.appendChild(d);});}
+function ro(list){const ct=document.getElementById('copts');ct.innerHTML='';list.forEach(c=>{const d=document.createElement('div');d.className='co'+(c.c===sel.c?' active':'');d.innerHTML=`<span class="fl">${c.f}</span><span class="cn">${c.n}</span><span class="dc">${c.c}</span>`;d.onclick=()=>{sel=c;document.getElementById('sf').textContent=c.f;document.getElementById('scode').textContent=c.c;document.getElementById('dl').classList.remove('open');document.getElementById('sc').classList.remove('open');ufp();ro(srt);};ct.appendChild(d);});}
 function ufp(){document.getElementById('fp').value=sel.c+' '+document.getElementById('pnum').value;}
 document.getElementById('sc').onclick=function(e){e.stopPropagation();this.classList.toggle('open');document.getElementById('dl').classList.toggle('open');setTimeout(()=>document.getElementById('si').focus(),80);};
 document.getElementById('si').oninput=function(){const q=this.value.toLowerCase();ro(srt.filter(c=>c.n.toLowerCase().includes(q)||c.c.includes(q)));};
